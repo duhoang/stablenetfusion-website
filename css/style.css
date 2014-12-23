@@ -223,7 +223,7 @@ html, body {
 .nav {
   font-weight: bold;
   font-size: 14px;
-  padding: 24px 0 8px 0;
+  padding: 16px 0 8px 0;
   text-align: center;
   line-height: 32px;
   white-space: nowrap;
@@ -285,7 +285,7 @@ html, body {
   @media all and (min-width: 640px) {
     .nav {
       font-size: 16px;
-      padding: 24px 0 16px 0; }
+      padding: 16px 0 16px 0; }
       .nav a {
         padding: 4px 0;
         margin: 0 5.3%; } }
@@ -308,7 +308,7 @@ html, body {
   font-size: 24px;
   text-align: center;
   color: #323232;
-  padding: 24px 0 32px;
+  padding: 24px 0 40px;
   max-width: 1024px;
   margin: 0 auto;
   transition: all 0.25s;
@@ -333,14 +333,14 @@ html, body {
   @media all and (min-width: 640px) {
     .section-head {
       font-size: 32px;
-      padding: 32px 0 48px; } }
+      padding: 32px 0 52px; } }
   @media all and (min-width: 768px) {
     .section-head {
       font-size: 36px; } }
   @media all and (min-width: 1024px) {
     .section-head {
       font-size: 48px;
-      padding: 48px 0 64px; } }
+      padding: 48px 0 80px; } }
 
 .section-view {
   max-width: 960px;
@@ -1048,11 +1048,11 @@ html, body {
   @media all and (min-width: 768px) {
     .next-link {
       margin-top: 80px;
-      font-size: 32px; }
+      font-size: 28px; }
       .next-link .icon {
-        width: 48px;
-        height: 48px;
-        vertical-align: -40%; } }
+        width: 40px;
+        height: 40px;
+        vertical-align: -34%; } }
 
 .icon {
   display: inline-block; }

@@ -204,7 +204,7 @@ html, body {
 .nav {
 	font-weight:bold;
 	font-size:14px;
-	padding:24px 0 8px 0;
+	padding:16px 0 8px 0;
 	//margin:0 16px;
 	text-align:center;
 	line-height:32px;
@@ -250,7 +250,7 @@ html, body {
 	
 	@media all and (min-width: $bp-mobile2){
 		font-size:16px;
-		padding:24px 0 16px 0;
+		padding:16px 0 16px 0;
 		a {
 			padding: 4px 0;
 			margin: 0 5.3%;
@@ -283,7 +283,7 @@ html, body {
 	font-size:24px;
 	text-align:center;
 	color:$gray8;
-	padding:24px 0 32px;
+	padding:24px 0 40px;
 	max-width:$bp-regular;
 	margin:0 auto;
 
@@ -295,7 +295,7 @@ html, body {
 
 	@media all and (min-width: $bp-mobile2){
 		font-size:32px;
-		padding:32px 0 48px;
+		padding:32px 0 52px;
 
 	}
 
@@ -306,7 +306,7 @@ html, body {
 
 	@media all and (min-width: $bp-regular){
 		font-size:48px;
-		padding:48px 0 64px;
+		padding:48px 0 80px;
 	}
 }
 
@@ -986,12 +986,12 @@ html, body {
 	
 	@media all and (min-width: $bp-narrow){
 		margin-top:80px;
-		font-size:32px;
+		font-size:28px;
 		
 		.icon {
-			width:48px;
-			height:48px;
-			vertical-align:-40%;
+			width:40px;
+			height:40px;
+			vertical-align:-34%;
 		}
 	}
 	
