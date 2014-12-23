@@ -41,10 +41,11 @@
       
       $(master).find(".info-sec").eq(index).addClass("showInfo").siblings().removeClass("showInfo").addClass("hideInfo");
       
-      $(master).find(".view-content img").eq(index).addClass("showImg").siblings().filter(":visible").removeClass("showImg").addClass("hideImg").addClass("dont-display");
+      var scrollpos = $(master).find(".view-content").scrollTop();
+      //$(master).find(".view-content").scrollTop(0);
+
+      $(master).find(".view-content .screenshot").eq(index).css("overflow", "auto").addClass("showImg").scrollTop(0).siblings().filter(":visible").removeClass("showImg").addClass("hideImg").css("overflow", "auto").scrollTop(scrollpos).addClass("dont-display");
       
-      $(master).find(".view-content").animate({ scrollTop: 0}, 0);
-	  
 	  
 	  if ($(window).width() > 756 ) {
 		  $("html, body").animate({scrollTop: $(master).find(".view-obj").offset().top - 32 + "px"}, 500);
@@ -52,7 +53,7 @@
       
     }
     
-    $(".view-content img").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){ $(this).removeClass("hideImg"); });
+    $(".view-content .screenshot").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){ $(this).removeClass("hideImg").css("overflow", "visible"); });
     
     $(".view-nav span").click(function(){
       
@@ -86,7 +87,7 @@
 		}
 	});
 
-  /*
+  
 	
 	$(".view-content").scroll(function(){
 		
@@ -101,7 +102,7 @@
 					self.is_scrolling = true;
 					
 					$("html, body").animate({scrollTop: $(master).offset().top - 32 + "px"}, 500, function(){ self.is_scrolling = false; });
-					
+					$(self).animate({scrollTop:0}, 0);	
 				}
 			}
 			
@@ -110,7 +111,7 @@
 		}
 	});
 
-*/
+
 	  
 	}); 
 </script>
@@ -185,8 +186,8 @@
                 
                 <div class="view-content">
                 	
-                	<img src="img/patron-1.jpg" />
-                	<img src="img/patron-2.jpg" />
+                	<div class="screenshot"><img src="img/patron-1.jpg" /></div>
+                	<div class="screenshot"><img src="img/patron-2.jpg" /></div>
                 </div>
             </div>
           </div>
@@ -220,9 +221,9 @@
             	
                 
                 <div class="view-content">
-                	<img src="img/amex-1.jpg" />
-                    <img src="img/amex-2.jpg" />
-                    <img src="img/amex-3.jpg" />
+                	<div class="screenshot"><img src="img/amex-1.jpg" /></div>
+                  <div class="screenshot">  <img src="img/amex-2.jpg" /></div>
+                   <div class="screenshot"> <img src="img/amex-3.jpg" /></div>
                 </div>
             </div>
           </div>
@@ -253,7 +254,7 @@
               
                 
                 <div class="view-content">
-                  <img src="img/hashable.jpg" />
+                  <div class="screenshot"><img src="img/hashable.jpg" /></div>
                 </div>
             </div>
           </div>
@@ -281,8 +282,8 @@
             <div class="view ">
                 
                 <div class="view-content">
-                	<img src="img/spoton-1.jpg" />
-                	<img src="img/spoton-2.jpg" />
+                	<div class="screenshot"><img src="img/spoton-1.jpg" /></div>
+                	<div class="screenshot"><img src="img/spoton-2.jpg" /></div>
                 </div>
             </div>
           </div>
@@ -315,7 +316,7 @@
             	
                 
                 <div class="view-content">
-                	<img src="img/screeningroom.jpg" />
+                	<div class="screenshot"><img src="img/screeningroom.jpg" /></div>
                 </div>
             </div>
           </div>
