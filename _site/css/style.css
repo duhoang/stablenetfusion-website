@@ -579,11 +579,14 @@ html, body {
     width: 15%;
     margin: 0;
     right: 30%;
-    top: 25%;
+    top: 22%;
     padding: 2.5% .5% 3.2% .5%;
     border-radius: 7px;
     border-width: 2px;
     z-index: 3; }
+  @media all and (min-width: 321px) {
+    .view-obj.small.iphone {
+      top: 28%; } }
   @media all and (min-width: 480px) {
     .view-obj.small.iphone {
       border-radius: 8px;
