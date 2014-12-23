@@ -156,20 +156,20 @@ html, body {
 .user-contact {
   position: absolute;
   right: 0;
-  padding-left: 16px;
+  padding-left: 32px;
   background: rgba(255, 255, 255, 0);
   /* Old browsers */
-  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 20%);
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 25%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(20%, white));
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(25%, white));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 20%);
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 25%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 20%);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 25%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 20%);
+  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 25%);
   /* IE10+ */
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 20%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 25%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$c-start', endColorstr='$c-end',GradientType=1 );
   /* IE6-9 */ }
