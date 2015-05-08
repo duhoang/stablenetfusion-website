@@ -121,6 +121,8 @@ html, body {
   margin-right: 2px; }
   .user-photo img {
     border-radius: 100%;
+    width: 60px;
+    height: 60px;
     border: 2px solid #c7c7c7; }
 
 .user-info {
