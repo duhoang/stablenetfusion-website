@@ -83,6 +83,10 @@ html, body {
 	max-width:$bp-narrow;
 	margin:0 auto;
 	padding:8px 0 0 0;
+
+	@media all and (min-width: $bp-narrow){
+		padding: 16px 0 0 0;
+	}
 }
 
 .user {
@@ -256,7 +260,7 @@ html, body {
 	
 	@media all and (min-width: $bp-mobile2){
 		font-size:16px;
-		padding:16px 0 16px 0;
+		padding:32px 0 16px 0;
 		a {
 			padding: 8px 0;
 			margin: 0 5.3%;
@@ -341,6 +345,18 @@ html, body {
 		
 	.view {
 		padding-bottom:56.25%;
+	}
+
+	&.wide {
+		.view {
+			padding-bottom:54%;
+		}
+	}
+
+	&.wide-2 {
+		.view {
+			padding-bottom:53%;
+		}
 	}
 	
 	&.mobile {
