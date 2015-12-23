@@ -93,6 +93,8 @@ html, body {
 	position:relative;
 	margin: 0 16px;
 	padding-bottom: 16px;
+	display: flex;
+	white-space: nowrap;
 	//border-bottom: 1px solid $gray2;
 }
 
@@ -129,10 +131,10 @@ html, body {
 
 .user-title {
 	color:$gray8;
-	font-size:13px;
+	font-size:11px;
 	
 	@media all and (min-width: $bp-narrow){
-		//font-size:13px;
+		font-size:13px;
 	}
 }
 
