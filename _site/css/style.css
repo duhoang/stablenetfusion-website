@@ -116,7 +116,8 @@ html, body {
 
 .user {
   position: relative;
-  margin: 0 16px; }
+  margin: 0 16px;
+  padding-bottom: 16px; }
 
 .user-photo {
   float: left;
@@ -246,7 +247,7 @@ html, body {
 .nav {
   font-weight: bold;
   font-size: 14px;
-  padding: 16px 0 8px 0;
+  padding: 8px 0 8px 0;
   text-align: center;
   line-height: 32px;
   white-space: nowrap;
@@ -308,7 +309,7 @@ html, body {
   @media all and (min-width: 640px) {
     .nav {
       font-size: 16px;
-      padding: 32px 0 16px 0; }
+      padding: 16px 0 8px 0; }
       .nav a {
         padding: 8px 0;
         margin: 0 5.3%; } }
@@ -403,7 +404,7 @@ html, body {
   .view-obj.wide .view {
     padding-bottom: 54%; }
   .view-obj.wide-2 .view {
-    padding-bottom: 53%; }
+    padding-bottom: 55.5%; }
   .view-obj.mobile {
     width: 38%; }
     .view-obj.mobile .view {

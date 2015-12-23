@@ -92,6 +92,8 @@ html, body {
 .user {
 	position:relative;
 	margin: 0 16px;
+	padding-bottom: 16px;
+	//border-bottom: 1px solid $gray2;
 }
 
 .user-photo {
@@ -214,7 +216,7 @@ html, body {
 .nav {
 	font-weight:bold;
 	font-size:14px;
-	padding:16px 0 8px 0;
+	padding:8px 0 8px 0;
 	//margin:0 16px;
 	text-align:center;
 	line-height:32px;
@@ -222,7 +224,8 @@ html, body {
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
 
-	//border-bottom:1px solid $gray3;
+	//border-bottom:1px solid $gray2;
+	//border-top:1px solid $gray2;
 	
 	@include css-transition(all, .25s, 0, ease-out);
 
@@ -260,7 +263,7 @@ html, body {
 	
 	@media all and (min-width: $bp-mobile2){
 		font-size:16px;
-		padding:32px 0 16px 0;
+		padding:16px 0 8px 0;
 		a {
 			padding: 8px 0;
 			margin: 0 5.3%;
@@ -355,7 +358,7 @@ html, body {
 
 	&.wide-2 {
 		.view {
-			padding-bottom:53%;
+			padding-bottom:55.5%;
 		}
 	}
 	
