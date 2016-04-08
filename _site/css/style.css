@@ -245,6 +245,7 @@ html, body {
   margin: 0 auto; }
   .nav .nav-item {
     flex-grow: 1;
+    flex-shrink: 0;
     padding: 0 8px; }
   .nav.adfin a.active:before {
     background: #26C6DA; }
@@ -621,12 +622,12 @@ html, body {
 .view-nav {
   text-align: center;
   padding: 16px 0 8px 0;
-  margin-top: 10px;
+  margin-top: 24px;
   font-size: 16px;
   font-weight: bold;
   color: #c7c7c7; }
   .view-nav span {
-    margin: 0 6px;
+    margin: 0 16px;
     cursor: pointer;
     position: relative;
     display: inline-block;
