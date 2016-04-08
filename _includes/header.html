@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>Du Hoang</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link href='http://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 
@@ -31,7 +31,7 @@
     });
 */
 		
-		function showSlide(master, index) {
+	function showSlide(master, index) {
       
       var $nav_item = $(master).find(".view-nav span").eq(index);
       
@@ -69,12 +69,12 @@
       }
     });
 
-    if($(window).width()<480){
+    if($(window).width()<768){
       $(".user-contact").addClass("contract")
     }
 
     $( window ).resize(function() {
-      if($(window).width()<480){
+      if($(window).width()<768){
         $(".user-contact").addClass("contract");
       } else {
         $(".user-contact").removeClass("contract");
@@ -82,7 +82,7 @@
     });
 	
 	$(window).scroll(function(){
-		if($(window).width()<480 && !$(".user-contact").hasClass("contract")){
+		if($(window).width()<768 && !$(".user-contact").hasClass("contract")){
 			 $(".user-contact").addClass("contract");	
 		}
 	});
@@ -111,6 +111,7 @@
 		}
 	});
 
+	$('.other').scrollLeft(1000);
 
 	  
 	}); 
