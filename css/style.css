@@ -382,7 +382,7 @@ html, body {
   .view-obj.iphone {
     width: 50%;
     border-radius: 20px;
-    padding: 10% 2% 12% 2%; }
+    padding: 10% 2% 11% 2%; }
     @media all and (min-width: 480px) {
       .view-obj.iphone {
         border-radius: 24px; }
@@ -1002,7 +1002,7 @@ html, body {
       display: block; }
 
 .next-link {
-  margin: 16px 0;
+  margin: 16px 0 32px;
   font-weight: 500;
   font-size: 16px;
   color: #a7a7a7;
