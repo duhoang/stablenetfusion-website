@@ -123,7 +123,7 @@
 
 
 
-	$('.nav').scrollLeft($('.nav-item .active').offset().left - 8);
+	$('.nav').scrollLeft($('.nav-item .active').offset().left + $('.nav-item .active').width()/2 - $(window).width()/2);
 
 	
 	});
