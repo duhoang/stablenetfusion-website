@@ -1001,12 +1001,11 @@ html, body {
 }
 
 .next-link {
-    margin: 16px 0 32px;
     font-weight: 500;
     font-size:16px;
     color:$gray4;
     text-align:center;
-    padding: 16px 0;
+    padding: 32px 0;
     
     @include css-transition(font-size, .25s, 0, ease-out);
     
@@ -1026,7 +1025,7 @@ html, body {
     
     @media all and (min-width: $bp-narrow){
         font-size:26px;
-        margin: 32px 0;
+        margin: 16px 0;
         .icon {
             width:36px;
             height:36px;
