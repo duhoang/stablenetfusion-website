@@ -384,17 +384,21 @@ html, body {
     }
 
     &.iphone {
-    
+
         width:50%;
         border-radius:20px;
         padding:10% 2% 12% 2%;
         
         @media all and (min-width: $bp-mobile){
             border-radius:24px;
+
+            &:not(.small) .view-chrome {
+                border:2px solid $gray4 !important;
+            }
         }
         
         @media all and (min-width: $bp-mobile2){
-            border-radius:28px;
+            border-radius:28px;            
         }
         
         @media all and (min-width: $bp-narrow){
@@ -414,16 +418,16 @@ html, body {
         
         .view-chrome{
             position:absolute;
-            bottom:1.5%;
+            bottom:1.2%;
             left:50%;
             margin-left:-9%;
-            width:18%;
+            padding-left:18%;
             height:auto;
+            width: auto;
             padding-bottom:18%;
             border-radius:50%;
             background:$white !important;
             border:1px solid $gray4;
-            //border:1px solid $gray8;
             
             &:after {
                 position:absolute;
@@ -442,16 +446,16 @@ html, body {
         }
         
         .chrome-details {
-            width:5.6%;
+            width: auto;
+            padding-left:4%;
             height:auto;
-            padding-bottom:6%;
+            padding-bottom:4%;
             position:absolute;
             left:50%;
-            margin-left:-2.8%;
-            top:2%;
+            margin-left:-2%;
+            top:2.5%;
             &:before, &:after {
                 opacity:0;
-                
             }
         }
     }
@@ -480,7 +484,7 @@ html, body {
         }
         
         .view {
-            padding-bottom:133.34%;
+            padding-bottom:132.5%;
             border:1px solid $gray4;
         }
         
@@ -489,7 +493,8 @@ html, body {
             bottom:.8%;
             left:50%;
             margin-left:-3.5%;
-            width:7%;
+            padding-left:7%;
+            width: auto;
             height:auto;
             padding-bottom:7%;
             border-radius:50%;
@@ -516,12 +521,13 @@ html, body {
         
         
         .chrome-details {
-            width:1.8%;
+            padding-left:2%;
             height:auto;
+            width:auto;
             padding-bottom:2%;
             position:absolute;
             left:50%;
-            margin-left:-.9%;
+            margin-left:-1%;
             top:2%;
             &:before, &:after {
                 opacity:0;
@@ -556,8 +562,8 @@ html, body {
         }
         
         .view {
-            padding-bottom:177.78%;
-            border:1px solid $gray8;
+            padding-bottom:177%;
+            border:1px solid $gray5;
             
         }
         
@@ -574,8 +580,9 @@ html, body {
         
         
         .chrome-details {
-            width:3.8%;
+            width:auto;
             height:auto;
+            padding-left: 4%;
             padding-bottom:4%;
             position:absolute;
             left:90%;
@@ -631,7 +638,7 @@ html, body {
             width:33%;
             margin:0;
             right:0;
-            top:6%;
+            transform: translateY(-100%);
             padding:3% 1.5% 3% 1.5%;
             border-radius:5px;
             border-width: 2px;
@@ -644,25 +651,20 @@ html, body {
             width:15%;
             margin:0;
             right:30%;
-            top:22%;
             padding:2.5% .5% 3.2% .5%;
             border-radius:7px;
             border-width:2px;
             z-index:3;
+            transform: translateY(-80%);
             
         }
 
-        @media all and (min-width: 321px){
-            &.iphone {
-                top:28%;
-            }
-        }
+
         
         @media all and (min-width: $bp-mobile){
         
             &.iphone {
                 border-radius:8px;
-                top:31%;
             }
             
             &.standard { 
@@ -702,7 +704,6 @@ html, body {
         @media all and (min-width: $bp-mobile2){
             &.iphone {
                 border-radius:12px;
-                top:34%;
                 border-width:2px;
             }
             
@@ -744,19 +745,11 @@ html, body {
                     }
                 }
             }
-            
-            &.iphone {
-                
-                top:35%;
-                
-            }
-        
         }
         
         @media all and (min-width: $bp-regular){
             &.iphone {
                 border-radius:16px;
-                top:37%;
                 
             }
             

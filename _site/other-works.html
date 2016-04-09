@@ -30,9 +30,10 @@
         $(".view-content:first-child").scrollTop( curr_child);
     });
 */
+	var isAnimateScroll = false;
 		
 	function showSlide(master, index) {
-      
+
       var $nav_item = $(master).find(".view-nav span").eq(index);
       
       $nav_item.addClass("active").siblings().removeClass("active")
@@ -42,25 +43,24 @@
       $(master).find(".info-sec").eq(index).addClass("showInfo").siblings().removeClass("showInfo").addClass("hideInfo");
       
       var scrollpos = $(master).find(".view-content").scrollTop();
-      //$(master).find(".view-content").scrollTop(0);
 
       $(master).find(".view-content .screenshot").eq(index).css("overflow", "auto").addClass("showImg").scrollTop(0).siblings().filter(":visible").removeClass("showImg").addClass("hideImg").css("overflow", "auto").scrollTop(scrollpos).addClass("dont-display");
-      
-	  
-	  if ($(window).width() > 756 ) {
-		  $("html, body").animate({scrollTop: $(master).find(".view-obj").offset().top - 32 + "px"}, 500);
-	  }
-      
+
+	  	if ($(window).width() > 756 ) {
+	  		isAnimateScroll = true;
+      		disableScroll();
+		 	var viewObj = $(master).find('.view-obj');
+		  	$("html, body").stop().animate({scrollTop: Math.min($(viewObj).offset().top + $(viewObj).outerHeight()/2 - $(window).height()/2, $(viewObj).offset().top) + "px"}, 250, function(){ isAnimateScroll=false; enableScroll(); });
+	  	}
+	   
     }
     
     $(".view-content .screenshot").bind("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){ $(this).removeClass("hideImg").css("overflow", "visible"); });
     
     $(".view-nav span").click(function(){
-      
       showSlide($(this).closest(".section"), $(this).parent().find("span").index(this));
     });
 
-    //$(".nav").animate({scrollLeft: "100%"}, 0);
 
     $(".user-contact").click(function(){
 
@@ -88,33 +88,69 @@
 	});
 
   
+  
 	
 	$(".view-content").scroll(function(){
 		
 		var self = this;
+		var master = $(this).closest(".view-obj");
 		
-		if ($(window).width() > 756 ) {
-			var master = $(this).closest(".view-obj");
-			
-			if (!self.current_scroll || self.current_scroll > $(this).scrollTop()) {
+		if ($(window).width() > 756 && !isAnimateScroll) {	
+
+			if ((!self.current_scroll || self.current_scroll !== $(self).scrollTop())) {
 				
-				if ($(window).scrollTop() < $(master).offset().top - 160 && !self.is_scrolling) {
-					self.is_scrolling = true;
-					
-					$("html, body").animate({scrollTop: $(master).offset().top - 32 + "px"}, 500, function(){ self.is_scrolling = false; });
-					//$(self).animate({scrollTop:0}, 0);	
+				if ($(window).scrollTop() < Math.min(Math.floor($(master).offset().top + $(master).outerHeight()/2 - $(window).height()/2), $(master).offset().top)
+						|| $(window).scrollTop() > $(master).offset().top ) {
+
+					disableScroll();
+					$("html, body").animate({scrollTop: Math.min($(master).offset().top + $(master).outerHeight()/2 - $(window).height()/2, $(master).offset().top) + "px"}, 250, function(){ enableScroll(); });
+
 				}
+
+				if ( $(self).scrollTop() === 0 || $(self).scrollTop() + $(self).height() + 1 >= $(self).find(".screenshot:visible img").height()) {
+					disableScroll();
+					$("html, body").stop().animate({scrollTop: $(window).scrollTop() + "px"}, 250, function(){ enableScroll(); console.log('stop')});
+					
+				}
+
 			}
-			
-			self.current_scroll = $(this).scrollTop();
-		
+
+			self.current_scroll = $(self).scrollTop();
 		}
+		
+		
 	});
+
+
 
 	$('.other').scrollLeft(1000);
 
-	  
-	}); 
+	
+	});
+
+	function preventDefault(e) {
+	  e = e || window.event;
+	  if (e.preventDefault)
+	      e.preventDefault();
+	  e.returnValue = false;  
+	}
+	 
+
+	function disableScroll() {
+	  if (window.addEventListener) // older FF
+	      window.addEventListener('DOMMouseScroll', preventDefault, false);
+	  window.onwheel = preventDefault; // modern standard
+	  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+	  window.ontouchmove  = preventDefault; // mobile
+	}
+
+	function enableScroll() {
+	    if (window.removeEventListener)
+	        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+	    window.onmousewheel = document.onmousewheel = null; 
+	    window.onwheel = null; 
+	    window.ontouchmove = null;  
+	}
 </script>
 </head>
 

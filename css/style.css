@@ -385,7 +385,9 @@ html, body {
     padding: 10% 2% 12% 2%; }
     @media all and (min-width: 480px) {
       .view-obj.iphone {
-        border-radius: 24px; } }
+        border-radius: 24px; }
+        .view-obj.iphone:not(.small) .view-chrome {
+          border: 2px solid #a7a7a7 !important; } }
     @media all and (min-width: 640px) {
       .view-obj.iphone {
         border-radius: 28px; } }
@@ -402,11 +404,12 @@ html, body {
       border: 1px solid #a7a7a7; }
     .view-obj.iphone .view-chrome {
       position: absolute;
-      bottom: 1.5%;
+      bottom: 1.2%;
       left: 50%;
       margin-left: -9%;
-      width: 18%;
+      padding-left: 18%;
       height: auto;
+      width: auto;
       padding-bottom: 18%;
       border-radius: 50%;
       background: #ffffff !important;
@@ -423,13 +426,14 @@ html, body {
         right: 0;
         bottom: 0; }
     .view-obj.iphone .chrome-details {
-      width: 5.6%;
+      width: auto;
+      padding-left: 4%;
       height: auto;
-      padding-bottom: 6%;
+      padding-bottom: 4%;
       position: absolute;
       left: 50%;
-      margin-left: -2.8%;
-      top: 2%; }
+      margin-left: -2%;
+      top: 2.5%; }
       .view-obj.iphone .chrome-details:before, .view-obj.iphone .chrome-details:after {
         opacity: 0; }
   .view-obj.ipad {
@@ -451,14 +455,15 @@ html, body {
       .view-obj.ipad {
         border-radius: 16px; } }
     .view-obj.ipad .view {
-      padding-bottom: 133.34%;
+      padding-bottom: 132.5%;
       border: 1px solid #a7a7a7; }
     .view-obj.ipad .view-chrome {
       position: absolute;
       bottom: .8%;
       left: 50%;
       margin-left: -3.5%;
-      width: 7%;
+      padding-left: 7%;
+      width: auto;
       height: auto;
       padding-bottom: 7%;
       border-radius: 50%;
@@ -476,12 +481,13 @@ html, body {
         bottom: 0;
         margin: auto; }
     .view-obj.ipad .chrome-details {
-      width: 1.8%;
+      padding-left: 2%;
       height: auto;
+      width: auto;
       padding-bottom: 2%;
       position: absolute;
       left: 50%;
-      margin-left: -.9%;
+      margin-left: -1%;
       top: 2%; }
       .view-obj.ipad .chrome-details:before, .view-obj.ipad .chrome-details:after {
         opacity: 0; }
@@ -504,8 +510,8 @@ html, body {
       .view-obj.android {
         border-radius: 16px; } }
     .view-obj.android .view {
-      padding-bottom: 177.78%;
-      border: 1px solid #323232; }
+      padding-bottom: 177%;
+      border: 1px solid #868686; }
     .view-obj.android .view-chrome {
       position: absolute;
       top: 4%;
@@ -515,8 +521,9 @@ html, body {
       background: #a7a7a7 !important;
       border: none; }
     .view-obj.android .chrome-details {
-      width: 3.8%;
+      width: auto;
       height: auto;
+      padding-left: 4%;
       padding-bottom: 4%;
       position: absolute;
       left: 90%;
@@ -548,7 +555,7 @@ html, body {
     width: 33%;
     margin: 0;
     right: 0;
-    top: 6%;
+    transform: translateY(-100%);
     padding: 3% 1.5% 3% 1.5%;
     border-radius: 5px;
     border-width: 2px;
@@ -558,18 +565,14 @@ html, body {
     width: 15%;
     margin: 0;
     right: 30%;
-    top: 22%;
     padding: 2.5% .5% 3.2% .5%;
     border-radius: 7px;
     border-width: 2px;
-    z-index: 3; }
-  @media all and (min-width: 321px) {
-    .view-obj.small.iphone {
-      top: 28%; } }
+    z-index: 3;
+    transform: translateY(-80%); }
   @media all and (min-width: 480px) {
     .view-obj.small.iphone {
-      border-radius: 8px;
-      top: 31%; }
+      border-radius: 8px; }
     .view-obj.small.standard {
       border-radius: 6px; }
       .view-obj.small.standard .view-chrome {
@@ -589,7 +592,6 @@ html, body {
   @media all and (min-width: 640px) {
     .view-obj.small.iphone {
       border-radius: 12px;
-      top: 34%;
       border-width: 2px; }
     .view-obj.small.ipad {
       border-radius: 8px; } }
@@ -609,13 +611,10 @@ html, body {
         .view-obj.small.standard .chrome-details:before {
           left: 20px; }
         .view-obj.small.standard .chrome-details:after {
-          left: 40px; }
-    .view-obj.small.iphone {
-      top: 35%; } }
+          left: 40px; } }
   @media all and (min-width: 1024px) {
     .view-obj.small.iphone {
-      border-radius: 16px;
-      top: 37%; }
+      border-radius: 16px; }
     .view-obj.small.ipad {
       border-radius: 12px; } }
 
