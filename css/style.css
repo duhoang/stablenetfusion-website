@@ -250,11 +250,11 @@ html, body {
   .nav.adfin a.active:before {
     background: #26C6DA; }
   .nav.cc a.active:before {
-    background: #FBC02D; }
+    background: #FF9800; }
   .nav.about a.active:before {
     background: #ef5350; }
   .nav.other a.active:before {
-    background: #AB47BC; }
+    background: #90A4AE; }
   .nav a {
     color: #c7c7c7;
     padding: 18px 12px 14px;
@@ -289,11 +289,11 @@ html, body {
   .content.adfin {
     background: #00BCD4; }
   .content.cc {
-    background: #FBC02D; }
+    background: #FF9800; }
   .content.about {
     background: #ef5350; }
   .content.other {
-    background: #AB47BC; }
+    background: #90A4AE; }
 
 .section {
   padding: 16px;
