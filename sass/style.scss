@@ -364,6 +364,12 @@ html, body {
         }
     }
 
+    &.vr {
+        .view {
+            padding-bottom:52.8%;
+        }
+    }
+
     &.wide-2 {
         .view {
             padding-bottom:55.5%;

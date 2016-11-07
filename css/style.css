@@ -371,6 +371,8 @@ html, body {
     padding-bottom: 56.25%; }
   .view-obj.wide .view {
     padding-bottom: 54%; }
+  .view-obj.vr .view {
+    padding-bottom: 52.8%; }
   .view-obj.wide-2 .view {
     padding-bottom: 55.5%; }
   .view-obj.mobile {
