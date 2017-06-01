@@ -369,6 +369,8 @@ html, body {
       border-width: 3px; } }
   .view-obj .view {
     padding-bottom: 56.25%; }
+  .view-obj.tall .view {
+    padding-bottom: 66.6%; }
   .view-obj.wide .view {
     padding-bottom: 54%; }
   .view-obj.vr .view {
