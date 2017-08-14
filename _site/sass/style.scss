@@ -377,6 +377,12 @@ html, body {
         }
     }
 
+    &.normal {
+        .view {
+            padding-bottom: 60%;
+        }
+    }
+
     &.wide-2 {
         .view {
             padding-bottom:55.5%;
