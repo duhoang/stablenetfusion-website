@@ -376,8 +376,8 @@ html, body {
   @media all and (min-width: 768px) {
     .section-view.section-dice {
       transition: transform .5s;
-      transform-origin: 100% 0;
-      transform: rotate3d(1.5, -1, 0.8, 60deg) translate(25%, 50%); }
+      transform-origin: 200% 0;
+      transform: rotate3d(1.5, -1, 0.8, 60deg) translate(15%, 100%); }
       .section-view.section-dice .tile {
         background: none !important;
         box-shadow: 24px 32px 12px rgba(0, 0, 0, 0.25);

@@ -456,7 +456,7 @@ html, body {
         @media all and (min-width: $bp-narrow){
             
             transition: transform .5s;
-            transform-origin: 100% 0;
+            transform-origin: 200% 0;
             .tile {
                 background: none !important;
                 box-shadow: 24px 32px 12px rgba(black, .25);
@@ -464,7 +464,7 @@ html, body {
                 transition: box-shadow .25s .25s;
             }
 
-            transform: rotate3d(1.5, -1, .8, 60deg) translate(25%, 50%);
+            transform: rotate3d(1.5, -1, .8, 60deg) translate(15%, 100%);
             .section:hover & {
                 transform: rotate3d(1.5, -1, .6, 0) translate(0, 0);
                 transition: transform 1s .25s;
