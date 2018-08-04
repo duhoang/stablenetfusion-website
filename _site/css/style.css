@@ -297,11 +297,11 @@ html, body {
   overflow: hidden; }
   @media all and (min-width: 768px) {
     .section {
-      padding: 32px 0 64px 0; } }
-  .section.dark:hover {
-    background: #202020; }
-    .section.dark:hover .section-heading, .section.dark:hover .section-info {
-      color: white; }
+      padding: 32px 0 64px 0; }
+      .section.dark:hover {
+        background: #202020; }
+        .section.dark:hover .section-heading, .section.dark:hover .section-info {
+          color: white; } }
 
 .arrow {
   position: absolute;
@@ -376,14 +376,15 @@ html, body {
   @media all and (min-width: 768px) {
     .section-view.section-dice {
       transition: transform .5s;
-      transform: rotate3d(1.5, -1, 0.8, 60deg); }
+      transform-origin: 100% 0;
+      transform: rotate3d(1.5, -1, 0.8, 60deg) translate(25%, 50%); }
       .section-view.section-dice .tile {
         background: none !important;
         box-shadow: 24px 32px 12px rgba(0, 0, 0, 0.25);
         width: 28%;
         transition: box-shadow .25s .25s; }
       .section:hover .section-view.section-dice {
-        transform: rotate3d(1.5, -1, 0.6, 0);
+        transform: rotate3d(1.5, -1, 0.6, 0) translate(0, 0);
         transition: transform 1s .25s; }
         .section:hover .section-view.section-dice .tile {
           box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);

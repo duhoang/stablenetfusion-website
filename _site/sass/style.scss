@@ -327,20 +327,18 @@ html, body {
     overflow: hidden;
      @media all and (min-width: $bp-narrow){
         padding: 32px 0 64px 0;
-
-    }
-
-    &.dark {
-        &:hover {
-            background: $gray9;
-            .section-heading, .section-info {
-                color: white;
+        &.dark {
+            &:hover {
+                background: $gray9;
+                .section-heading, .section-info {
+                    color: white;
+                }
             }
+
+
         }
 
-
     }
-
 
 }
 
@@ -458,7 +456,7 @@ html, body {
         @media all and (min-width: $bp-narrow){
             
             transition: transform .5s;
-
+            transform-origin: 100% 0;
             .tile {
                 background: none !important;
                 box-shadow: 24px 32px 12px rgba(black, .25);
@@ -466,9 +464,9 @@ html, body {
                 transition: box-shadow .25s .25s;
             }
 
-            transform: rotate3d(1.5, -1, .8, 60deg);
+            transform: rotate3d(1.5, -1, .8, 60deg) translate(25%, 50%);
             .section:hover & {
-                transform: rotate3d(1.5, -1, .6, 0);
+                transform: rotate3d(1.5, -1, .6, 0) translate(0, 0);
                 transition: transform 1s .25s;
 
                 .tile {
