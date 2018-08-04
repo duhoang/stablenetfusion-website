@@ -266,6 +266,24 @@ html, body {
       text-decoration: underline !important;
       color: #00fff6; }
 
+.content {
+  position: relative; }
+  .content:before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    animation: hoverBlock .1s 1s;
+    animation-fill-mode: both; }
+
+@keyframes hoverBlock {
+  0% {
+    height: 100%; }
+  100% {
+    height: 0%; } }
 .section {
   padding: 16px;
   margin: 0 auto;
