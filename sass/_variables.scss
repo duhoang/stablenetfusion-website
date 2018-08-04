@@ -57,29 +57,13 @@ $google-color: #dd4c39;
 $twitter-color: #2daae1;
 $linkedin-color: #007bb6;
 
+$neon: #00fff6;
+
 $text-black: $gray8;
 $text-gray: $gray6;
 $text-light: $gray5;
 
-/* Font Families */
 
-$helvetica: Helvetica,  sans-serif;
-$ubuntu:'Ubuntu', sans-serif;
-
-/* Font Sizes */
-
-$text-xxsmall:10px;
-$text-xsmall:11px;
-$text-small:12px;
-$text-med:13px;
-$text-big:15px;
-$text-xbig:19px;
-$text-xxbig:24px;
-$text-xxxbig:30px;
-$text-xxxxbig:40px;
-$text-xxxxxbig:50px;
-
-/* Responsive Break Points */
 
 $bp-mobile:480px;
 $bp-mobile2:640px;
@@ -89,3 +73,5 @@ $bp-narrow2:960px;
 $bp-regular:1024px;
 $bp-regular2:1280px;
 $bp-wide:1440px;
+
+$max-screen-width: $bp-regular2;
