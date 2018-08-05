@@ -42,10 +42,12 @@ html, body {
 }
 
 .fadein {
+    @media all and (min-width: $bp-narrow){
 
-    .header {
-        animation: fadeIn 1s 1.25s;
-        animation-fill-mode: both;
+        .header {
+            animation: fadeIn 1s 1.25s;
+            animation-fill-mode: both;
+        }
     }
 }
 
@@ -509,7 +511,7 @@ html, body {
 
     &.section-tweet {
         .view-transform {
-            padding-bottom: 49%;
+            padding-bottom: 54%;
         }
         .tile {
             position: absolute;
@@ -517,7 +519,6 @@ html, body {
             left: 0;
             margin: 0;
             border: 2px solid $gray3;
-            background: gray;
             transition: transform .5s;
 
             &.order-3 {
@@ -533,6 +534,10 @@ html, body {
             }
         }
         @media all and (min-width: $bp-narrow){
+
+            .view-transform {
+                padding-bottom: 49%;
+            }
            
                 transform: rotate3d(1.5, -1, .8, 60deg) scale(.8, .8);
                 transition: transform .5s;
