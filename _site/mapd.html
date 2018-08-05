@@ -31,6 +31,35 @@
 			scrollTop = $(window).scrollTop();
 		});
 
+
+		$(".arrow").on("click", function(){
+
+			if ($(this).hasClass("arrow-right")) {
+				$(this).parent().find(".order").each(function() {
+					if ($(this).hasClass("order-1")) {
+						$(this).addClass("order-2").removeClass("order-1 animated tile-right")
+					} else if ($(this).hasClass("order-2")) {
+						$(this).addClass("order-3 tile-right").removeClass("order-2 animated")
+					} else {
+						$(this).addClass("order-1").removeClass("order-3 animated tile-right")
+					}
+				})
+			} else {
+				$(this).parent().find(".order").each(function() {
+					if ($(this).hasClass("order-1")) {
+						$(this).addClass("order-3 tile-left").removeClass("order-1 animated")
+					} else if ($(this).hasClass("order-2")) {
+						$(this).addClass("order-1").removeClass("order-2 animated tile-left")
+					} else {
+						$(this).addClass("order-2").removeClass("order-3 animated tile-left")
+					}
+				})
+			}
+
+		})
+
+		$('.nav').scrollLeft($('.nav-item .active').offset().left + $('.nav-item .active').width()/2 - $(window).width()/2);
+
 	});
 
 
@@ -137,118 +166,111 @@
             <div class="nav-item">
               <a href="calorie-count.html">Calorie Count</a> 
             </div>
-            <div class="nav-item">
-              <a href="about-com.html">About.com</a> 
-            </div>
+
             
           </div>
       </div>
     </div>
   </div>
   <div class="content">
-    <div class="section">
-      <div class="section-head">
-        MapD Tweet Map
-      </div>
-      <div class="section-view">
-        <div class="view-obj slide-up wide">
-        	<div class="view-chrome"></div>
-          <div class="chrome-details"></div>
-          <div class="view">
-              <div class="view-content">
-                <div class="screenshot">
-                 <img src="img/mapd-1.png" srcset="img/mapd-1-lowres.png 640w, img/mapd-1.png 1280w" />
-                </div>
 
-                <div class="screenshot">
-                 <img src="img/mapd-2.png" srcset="img/mapd-2-lowres.png 640w, img/mapd-2.png 1280w" />
-                </div>
-              	
-                <div class="screenshot">
-              	   <img src="img/mapd-3.png" srcset="img/mapd-3-lowres.png 640w, img/mapd-3.png 1280w" />
-                </div>
-              </div>
-          </div>
+    <div class="section">
+      <div class="section-view section-tweet">
+        <div class="arrow arrow-left">
+          <svg viewBox="0 0 24 24"><use xlink:href="#arrow"></use></svg>
         </div>
-         <div class="view-nav"><span data-mode="standard" class="active"></span><span data-mode="standard"></span><span data-mode="standard"></span></div>
-        <div class="section-info">
-        	<div class="info-inner">
-          	<div class="info-sec">
-                  <p><strong>MapD</strong> wanted a beautiful data visualization demo to impress potential investors and customers. So to that end I designed and built for them a bold, modern, highly interactive tweet map, using D3.js and MapBoxGL.</p>
-                  <p>The visual design of the map was inspired by the colors and lines of Japanese woodblock paintings.</p>
-             </div>
-        	</div>
+
+        <div class="arrow arrow-right">
+          <svg viewBox="0 0 24 24"><use xlink:href="#arrow"></use></svg>
+        </div>
+
+        <div class="view-transform ">
+          <div class="tile order order-3 animated">
+                <img src="img/mapd-1.png" srcset="img/mapd-1-lowres.png 640w, img/mapd-1.png 1280w" />
+          </div>
+
+          
+
+          <div class="tile order order-2 animated">
+                <img src="img/mapd-2.png" srcset="img/mapd-2-lowres.png 640w, img/mapd-2.png 1280w" />
+          </div>
+
+          <div class="tile order order-1 animated">
+                <img src="img/mapd-3.png" srcset="img/mapd-3-lowres.png 640w, img/mapd-3.png 1280w" />
+          </div>
+
+
+
+
         </div>
       </div>
-      
+
+      <div class="section-heading">Tweet Map</div>
+      <div class="section-info">
+        <p><strong>MapD</strong> wanted a beautiful data visualization demo to impress potential investors and customers. So to that end I designed and built for them a bold, modern, highly interactive tweet map, using D3.js and MapBoxGL.</p>
+                  <p>The visual design of the map was inspired by the colors and lines of Japanese woodblock paintings.</p>
+      </div>
     </div>
 
     <div class="section">
-      <div class="section-head">
-        Data Visualization Dashboard
-      </div>
-      <div class="section-view">
-        <div class="view-obj slide-up wide-2">
-          <div class="view-chrome"></div>
-          <div class="chrome-details"></div>
-          <div class="view">
-              <div class="view-content">
-                
-                <div class="screenshot">
-                   <img src="img/mapd-dashboard.png" srcset="img/mapd-dashboard-sm.png 640w, img/mapd-dashboard.png 1280w" />
-                </div>
-                <div class="screenshot">
-                 <img src="img/mapd-chart-editor.png" srcset="img/mapd-chart-editor-sm.png 640w, img/mapd-chart-editor.png 1280w" />
-                </div>
-                <div class="screenshot">
-                 <img src="img/mapd-dashboards.png" srcset="img/mapd-dashboards-sm.png 640w, img/mapd-dashboards.png 1280w" />
-                </div>
-                  
-              </div>
-          </div>
+      <div class="section-view section-tweet">
+        <div class="arrow arrow-left">
+          <svg viewBox="0 0 24 24"><use xlink:href="#arrow"></use></svg>
         </div>
-         <div class="view-nav"><span data-mode="standard" class="active"></span><span data-mode="standard"></span><span data-mode="standard"></span></div>
-        <div class="section-info">
-          <div class="info-inner">
-            <div class="info-sec">
-                  <p>In the competitive landscape of data visualization platforms, <strong>MapD</strong> needed innovative design to differentiate itself from the rest of the pack.</p>
+
+        <div class="arrow arrow-right">
+          <svg viewBox="0 0 24 24"><use xlink:href="#arrow"></use></svg>
+        </div>
+
+        <div class="view-transform ">
+          <div class="tile order order-3 animated">
+                <img src="img/mapd-dashboard.png" srcset="img/mapd-dashboard-sm.png 640w, img/mapd-dashboard.png 1280w" />
+          </div>
+
+          
+
+          <div class="tile order order-2 animated">
+                <img src="img/mapd-chart-editor.png" srcset="img/mapd-chart-editor-sm.png 640w, img/mapd-chart-editor.png 1280w" />
+          </div>
+
+          <div class="tile order order-1 animated">
+                
+                 <img src="img/mapd-dashboards.png" srcset="img/mapd-dashboards-sm.png 640w, img/mapd-dashboards.png 1280w" />
+          </div>
+
+
+
+
+        </div>
+      </div>
+
+      <div class="section-heading">Data Visualization Dashboard</div>
+      <div class="section-info">
+        <p>In the competitive landscape of data visualization platforms, <strong>MapD</strong> needed innovative design to differentiate itself from the rest of the pack.</p>
                   <p>The key was to leapfrog the current industry standard, which is mired in decades of corporate application design, with its obtuse visual language and steep learning curve.</p> 
                   <p>So I created new design paradigms with the aim of bringing clarity and simplicity to the complex world of big data exploration.</p>
-             </div>
-          </div>
-        </div>
       </div>
-      
     </div>
 
-    <div class="section">
-      <div class="section-head">
-        Tweet Map Interactions 
-      </div>
-      <div class="section-view">
-        <div class="view-obj no-chrome">
-          <div class="view-chrome"></div>
-          <div class="chrome-details"></div>
-          <div class="view ">
-              <div class="view-content">
-                <iframe src="http://player.vimeo.com/video/144312724?loop=1&amp;title=0&amp;byline=0&amp;portrait=0" style="width:100%; height:100%;"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-              </div>
-          </div>
-        </div>
-        <div class="section-info">
-          <div class="info-inner">
-            <div class="info-sec">
-                  <p>My philosophy is that interactive data visualization should be more than just a collection of static views. And through the thoughtful use of animation and transitions, my goal is to bring them to life.</p>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-      
-    </div>
+    <div class="section dark">
+      <div class="section-view video">
+        <div class="view-transform">
 
+          <div class="tile">
+            <iframe src="http://player.vimeo.com/video/144312724?loop=1&amp;title=0&amp;byline=0&amp;portrait=0" style="width:100%; height:100%;"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-heading">Tweet Map Interactions</div>
+      <div class="section-info">
+        <p>My philosophy is that interactive data visualization should be more than just a collection of static views. And through the thoughtful use of animation and transitions, my goal is to bring them to life.</p>
+        </p>
+      </div>
+    </div>
+    
   </div>
-  <div  class="next-link"><a href="adfin.html"> My Work For AdFin<span class="icon"><svg viewBox="0 0 32 32"><use xlink:href="#icon-arr-right"></use></svg></span></a></div>
+  <div  class="next-link"><a href="adfin.html"> My Work For AdFin<span class="icon"><svg viewBox="0 0 24 24"><use xlink:href="#arrow"></use></svg></span></a></div>
 </body>
 
 </html>

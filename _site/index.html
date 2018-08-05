@@ -31,6 +31,35 @@
 			scrollTop = $(window).scrollTop();
 		});
 
+
+		$(".arrow").on("click", function(){
+
+			if ($(this).hasClass("arrow-right")) {
+				$(this).parent().find(".order").each(function() {
+					if ($(this).hasClass("order-1")) {
+						$(this).addClass("order-2").removeClass("order-1 animated tile-right")
+					} else if ($(this).hasClass("order-2")) {
+						$(this).addClass("order-3 tile-right").removeClass("order-2 animated")
+					} else {
+						$(this).addClass("order-1").removeClass("order-3 animated tile-right")
+					}
+				})
+			} else {
+				$(this).parent().find(".order").each(function() {
+					if ($(this).hasClass("order-1")) {
+						$(this).addClass("order-3 tile-left").removeClass("order-1 animated")
+					} else if ($(this).hasClass("order-2")) {
+						$(this).addClass("order-1").removeClass("order-2 animated tile-left")
+					} else {
+						$(this).addClass("order-2").removeClass("order-3 animated tile-left")
+					}
+				})
+			}
+
+		})
+
+		$('.nav').scrollLeft($('.nav-item .active').offset().left + $('.nav-item .active').width()/2 - $(window).width()/2);
+
 	});
 
 
@@ -124,7 +153,7 @@
       </div>
     </div>
  
-          <div class="nav other" style="display: none;">
+          <div class="nav other">
             <div class="nav-item">
               <a href="index.html" class="active">3D/VR/AR</a>
             </div>
@@ -137,9 +166,7 @@
             <div class="nav-item">
               <a href="calorie-count.html">Calorie Count</a> 
             </div>
-            <div class="nav-item">
-              <a href="about-com.html">About.com</a> 
-            </div>
+
           </div>
       </div>
     </div>
@@ -246,7 +273,7 @@
       </div>
     </div>
 
-    <div  class="next-link" style="display:none">
+    <div  class="next-link" >
       <a href="mapd.html"> My Work for MapD<span class="icon"><svg viewBox="0 0 24 24"><use xlink:href="#arrow"></use></svg></span></a>
     </div>
 </body>
