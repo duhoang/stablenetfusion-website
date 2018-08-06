@@ -823,7 +823,7 @@ html, body {
     100% {
         opacity: 0;
        
-        transform: scale(1.05) translate(15%, 0) rotate(15deg);
+        transform: scale(1.05) translate(15%, 0) rotate(8deg);
     }
 
 }
@@ -839,7 +839,7 @@ html, body {
     }
     100% {
         opacity: 0;
-        transform: scale(1.05) translate(-15%, 0) rotate(-15deg);
+        transform: scale(1.05) translate(-15%, 0) rotate(-8deg);
     }
 
 }
