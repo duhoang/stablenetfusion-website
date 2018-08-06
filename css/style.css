@@ -496,15 +496,14 @@ html, body {
   @media all and (min-width: 768px) {
     .section-view.section-dice {
       transition: transform .5s;
-      transform-origin: 200% 0;
-      transform: rotate3d(1.5, -1, 0.8, 60deg) translate(15%, 100%); }
+      transform: scale(0.8) rotate3d(1.5, -1, 0.8, 60deg); }
       .section-view.section-dice .tile {
         background: none !important;
         box-shadow: 24px 32px 12px rgba(0, 0, 0, 0.25);
         width: 28%;
         transition: box-shadow .25s .25s; }
       .section:hover .section-view.section-dice {
-        transform: rotate3d(1.5, -1, 0.6, 0) translate(0, 0);
+        transform: scale(1) rotate3d(1.5, -1, 0.6, 0) translate(0, 0);
         transition: transform 1s .25s; }
         .section:hover .section-view.section-dice .tile {
           box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
@@ -553,7 +552,17 @@ html, body {
     margin-left: 16px; }
   @media all and (min-width: 768px) {
     .tile + .tile {
-      margin-left: 32px; } }
+      margin-left: 32px; }
+    .tile.tile-right {
+      z-index: 4 !important;
+      filter: none !important;
+      transform-origin: 100% 0;
+      animation: tileRight .4s ease-in; }
+    .tile.tile-left {
+      z-index: 4 !important;
+      filter: none !important;
+      transform-origin: 0 0;
+      animation: tileLeft .4s ease-in; } }
   .scrollable .tile {
     height: 100%;
     overflow: hidden; }
@@ -568,30 +577,30 @@ html, body {
 @keyframes tileRight {
   0% {
     opacity: 1;
-    z-index: 5;
-    transform: translate(0, 0); }
+    transform: scale(1) translate(0, 0) rotate(0); }
+  60% {
+    opacity: .9; }
   100% {
     opacity: 0;
-    z-index: 5;
-    transform: translate(20%, 0); } }
+    transform: scale(1.05) translate(15%, 0) rotate(15deg); } }
 @keyframes tileLeft {
   0% {
     opacity: 1;
-    z-index: 5;
-    transform: translate(0, 0); }
+    transform: scale(1) translate(0, 0) rotate(0); }
+  60% {
+    opacity: .9; }
   100% {
     opacity: 0;
-    z-index: 5;
-    transform: translate(-20%, 0); } }
+    transform: scale(1.05) translate(-15%, 0) rotate(-15deg); } }
 .section-heading {
   font-size: 32px;
   text-align: center;
-  padding: 8px 0 16px;
+  padding: 8px 16px 16px;
   font-weight: 200; }
   @media all and (min-width: 768px) {
     .section-heading {
       font-size: 64px;
-      padding: 16px 0 32px; } }
+      padding: 16px 32px 32px; } }
 
 .section-info {
   max-width: 768px;

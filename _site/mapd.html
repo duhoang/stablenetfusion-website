@@ -37,21 +37,21 @@
 			if ($(this).hasClass("arrow-right")) {
 				$(this).parent().find(".order").each(function() {
 					if ($(this).hasClass("order-1")) {
-						$(this).addClass("order-2").removeClass("order-1 animated tile-right")
+						$(this).addClass("order-2").removeClass("order-1 animated t")
 					} else if ($(this).hasClass("order-2")) {
-						$(this).addClass("order-3 tile-right").removeClass("order-2 animated")
+						$(this).addClass("order-3").removeClass("order-2 animated")
 					} else {
-						$(this).addClass("order-1").removeClass("order-3 animated tile-right")
+						$(this).addClass("order-1 tile-right").removeClass("order-3 animated")
 					}
 				})
 			} else {
 				$(this).parent().find(".order").each(function() {
 					if ($(this).hasClass("order-1")) {
-						$(this).addClass("order-3 tile-left").removeClass("order-1 animated")
+						$(this).addClass("order-3").removeClass("order-1 animated")
 					} else if ($(this).hasClass("order-2")) {
-						$(this).addClass("order-1").removeClass("order-2 animated tile-left")
+						$(this).addClass("order-1").removeClass("order-2 animated")
 					} else {
-						$(this).addClass("order-2").removeClass("order-3 animated tile-left")
+						$(this).addClass("order-2 tile-left").removeClass("order-3 animated")
 					}
 				})
 			}
@@ -59,7 +59,10 @@
 		})
 
 		$('.nav').scrollLeft($('.nav-item .active').offset().left + $('.nav-item .active').width()/2 - $(window).width()/2);
-
+		$('.order').on('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
+		    function() {
+		    	$(this).removeClass("tile-left tile-right");
+		    });
 	});
 
 
