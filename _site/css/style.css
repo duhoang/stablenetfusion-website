@@ -339,6 +339,7 @@ html, body {
   padding: 32px 0;
   position: relative;
   width: 100%;
+  max-width: 1280px;
   user-select: none;
   perspective: 2000px;
   perspective-origin: center center; }
@@ -539,7 +540,7 @@ html, body {
   width: 100%;
   max-width: 1280px;
   position: relative;
-  background: #c7c7c7;
+  background: #e2e2e2;
   transform: translate3d(0, 0, 0); }
   .tile img {
     width: 100%; }
@@ -557,12 +558,12 @@ html, body {
       z-index: 4 !important;
       filter: none !important;
       transform-origin: 100% 0;
-      animation: tileRight .4s ease-in; }
+      animation: tileRight .3s ease-in; }
     .tile.tile-left {
       z-index: 4 !important;
       filter: none !important;
       transform-origin: 0 0;
-      animation: tileLeft .4s ease-in; } }
+      animation: tileLeft .3s ease-in; } }
   .scrollable .tile {
     height: 100%;
     overflow: hidden; }

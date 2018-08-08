@@ -400,6 +400,7 @@ html, body {
     padding: 32px 0;
     position: relative;
     width: 100%;
+    max-width: 1280px;
     user-select: none;
 
     @media all and (min-width: $bp-narrow){
@@ -750,7 +751,7 @@ html, body {
     width: 100%;
     max-width: 1280px;
     position: relative;
-    background: $gray3;
+    background: $gray2;
     transform: translate3d(0, 0, 0);
 
     img {
@@ -780,14 +781,14 @@ html, body {
             z-index: 4 !important;
             filter: none !important;
             transform-origin: 100% 0;
-            animation: tileRight .4s ease-in;
+            animation: tileRight .3s ease-in;
         }
 
         &.tile-left {
             z-index: 4 !important;
             filter: none !important;
             transform-origin: 0 0;
-            animation: tileLeft .4s ease-in;
+            animation: tileLeft .3s ease-in;
         }
     }
 
