@@ -411,10 +411,19 @@ html, body {
     perspective-origin: center center;
 
     &.section-cc {
-        padding-bottom: 120%;
+        
+        transform: translate(-32%, 20%) rotate3d(1.5, -1, .8, 60deg) scale(.8, .8);
+        transition: transform .5s;
+        
         .view-transform {
-            display: block;
+            flex-direction: column;
+            
+            padding-bottom: 100%;
+        }
+
+        .row-holder {
             position: absolute;
+            width: 100%;
         }
 
         .row {
@@ -437,7 +446,7 @@ html, body {
         }
 
         .translate-right {
-            transform: translateX(52%);
+            transform: translateX(37%);
             align-items: center;
             width: 115%;
         }
@@ -452,8 +461,6 @@ html, body {
 
 
         }
-        transform: translate(0, -16%) rotate3d(1.5, -1, .8, 60deg) scale(.8, .8);
-        transition: transform .5s;
         
         .android {
             img {
@@ -469,7 +476,9 @@ html, body {
         }
 
         @media all and (min-width: $bp-narrow){
-            padding-bottom: 112%;
+            .view-transform {
+                padding-bottom: 100%;
+            }
                 .margin-right {
                     margin-right:  64px;
                 }
