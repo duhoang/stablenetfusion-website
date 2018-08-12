@@ -790,14 +790,14 @@ html, body {
             z-index: 4 !important;
             filter: none !important;
             transform-origin: 100% 0;
-            animation: tileRight .3s ease-in;
+            animation: tileRight .25s ease-in;
         }
 
         &.tile-left {
             z-index: 4 !important;
             filter: none !important;
             transform-origin: 0 0;
-            animation: tileLeft .3s ease-in;
+            animation: tileLeft .25s ease-in;
         }
     }
 
