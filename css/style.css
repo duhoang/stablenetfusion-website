@@ -75,7 +75,9 @@ html, body {
   color: #202020;
   min-width: 320px;
   font-weight: 300;
-  font-size: 13px; }
+  font-size: 13px;
+  letter-spacing: .2;
+  word-spacing: 1.5; }
 
 @media all and (min-width: 768px) {
   .fadein .header {
@@ -124,31 +126,39 @@ html, body {
       height: 120px; } }
 
 .user-info {
+  position: relative;
+  top: -4px;
   flex-grow: 1;
   padding-left: 32px; }
   @media all and (min-width: 768px) {
     .user-info {
+      top: auto;
       padding-left: 48px; } }
 
 .user-quote {
-  font-weight: 200;
-  font-size: 15px;
+  font-weight: 100;
+  font-size: 13px;
   line-height: 24px;
   position: relative;
   margin: 48px 0 0;
-  padding: 0 32px;
+  word-spacing: 2.5;
+  letter-spacing: .8;
+  padding: 0;
   font-style: italic; }
   @media all and (min-width: 768px) {
     .user-quote {
       line-height: 32px;
       font-size: 17px;
       margin-top: 16px;
-      width: 50%; } }
+      width: 50%;
+      padding: 0 16px; } }
 
 .user-name {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 100;
-  margin-bottom: 2px; }
+  margin-bottom: 2px;
+  letter-spacing: 1;
+  word-spacing: 2; }
   @media all and (min-width: 768px) {
     .user-name {
       margin-bottom: 2px;
@@ -158,7 +168,8 @@ html, body {
   color: #a7a7a7;
   font-size: 13px;
   line-height: 17px;
-  white-space: nowrap; }
+  white-space: nowrap;
+  font-weight: 100; }
   @media all and (min-width: 768px) {
     .user-title {
       font-size: 15px;
@@ -172,7 +183,7 @@ html, body {
   padding: 4px 0; }
   @media all and (min-width: 768px) {
     .user-contact {
-      padding: 8px 0; } }
+      padding: 16px 0; } }
 
 .user-flexbox {
   display: flex;
@@ -182,7 +193,8 @@ html, body {
   width: 0;
   height: 0;
   fill: #a7a7a7;
-  position: absolute; }
+  position: absolute;
+  display: none !important; }
   .quote-front svg, .quote-back svg {
     width: 24px;
     height: 24px;
@@ -245,7 +257,7 @@ html, body {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   display: flex;
-  max-width: 840px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 16px; }
   .nav .nav-item {
@@ -264,7 +276,6 @@ html, body {
     .nav a:hover, .nav a.active {
       color: #00E5FF; }
     .nav a.active {
-      text-decoration: underline !important;
       color: #00E5FF; }
 
 .content {
@@ -302,7 +313,19 @@ html, body {
       .section.dark:hover {
         background: #202020; }
         .section.dark:hover .section-heading, .section.dark:hover .section-info {
-          color: white; } }
+          color: white; }
+      .section.side-section {
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 1280px; }
+        .section.side-section .side-column {
+          padding: 64px 0; }
+        .section.side-section.right-aligned {
+          flex-direction: row-reverse; } }
+
+.side-column {
+  min-width: 50%;
+  flex-grow: 1; }
 
 .arrow {
   position: absolute;
@@ -478,6 +501,8 @@ html, body {
           box-shadow: 0 0 32px 16px black;
           opacity: .25;
           transition: width .25s, height .25s, bottom .25s .2s; }
+        .section-view.down-up .view-transform .grid-fx {
+          animation: fadeInGrid 1s; }
         .section:hover .section-view.down-up .view-transform:after {
           bottom: 0;
           width: 100%;
@@ -519,6 +544,13 @@ html, body {
   100% {
     pointer-events: none;
     transform: rotate3d(1, 0, 0, 60deg) translate3d(0, 0, 120px); } }
+@keyframes fadeInGrid {
+  0% {
+    opacity: 1; }
+  40% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 @keyframes rightLeftAnim {
   0% {
     transform: translate3d(100%, 0, 0); }
@@ -620,7 +652,9 @@ html, body {
   @media all and (min-width: 768px) {
     .section-info {
       font-size: 15px;
-      line-height: 28px; } }
+      line-height: 28px; }
+      .side-column .section-info {
+        padding: 0 64px; } }
 
 .view-chrome {
   height: 16px;
@@ -1007,5 +1041,18 @@ html, body {
     /* Safari and Chrome */
     -o-animation-timing-function: ease-out;
     /* Opera */ }
+
+.grid-fx {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+  background-color: #d4d4d4;
+  background-image: linear-gradient(0deg, transparent 25%, black 25.1%, black 25.9%, transparent 26%, transparent 75%, black 75.1%, black 75.9%, transparent 76%, transparent), linear-gradient(90deg, transparent 25%, black 25.1%, black 25.9%, transparent 26%, transparent 75%, black 75.1%, black 75.9%, transparent 76%, transparent);
+  background-size: 20% 33%;
+  -webkit-mask-image: -webkit-gradient(linear, left 0%, right bottom, from(black), to(rgba(0, 0, 0, 0.5))); }
 
 /*# sourceMappingURL=style.css.map */

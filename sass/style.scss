@@ -39,6 +39,8 @@ html, body {
     min-width:320px;
     font-weight: 300;
     font-size: 13px;
+    letter-spacing: .2;
+    word-spacing: 1.5;
 }
 
 .fadein {
@@ -117,23 +119,28 @@ html, body {
 }
 
 .user-info {
+    position: relative;
+    top: -4px;
     flex-grow: 1;
     padding-left: 32px;
     @media all and (min-width: $bp-narrow){
+        top: auto;
         padding-left: 48px;
     }
 }
 
 .user-quote {
     
-    font-weight: 200;
+    font-weight: 100;
     //color: $gray8;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 24px;
     position: relative;
     margin: 48px 0 0;
+    word-spacing: 2.5;
+    letter-spacing: .8;
     
-    padding: 0 32px;
+    padding: 0;
     font-style: italic;
 
     @media all and (min-width: $bp-narrow){
@@ -141,13 +148,16 @@ html, body {
         font-size: 17px;
         margin-top: 16px;
         width: 50%;
+        padding: 0 16px;
     }
 }
 
 .user-name {
-    font-size:22px;
+    font-size:24px;
     font-weight:100;
     margin-bottom: 2px;
+    letter-spacing: 1;
+    word-spacing: 2;
     @media all and (min-width: $bp-narrow){
         margin-bottom: 2px;
         font-size:34px;
@@ -159,6 +169,7 @@ html, body {
     font-size:13px;
     line-height: 17px;
     white-space: nowrap;
+    font-weight: 100;
 
     @media all and (min-width: $bp-narrow){
         font-size:15px;
@@ -175,7 +186,7 @@ html, body {
     padding: 4px 0;
 
     @media all and (min-width: $bp-narrow){
-        padding: 8px 0;
+        padding: 16px 0;
     }
 
 }
@@ -190,7 +201,7 @@ html, body {
     height: 0;
     fill: $gray4;
     position: absolute;
-
+    display: none !important;
     svg {
         width: 24px;
         height: 24px;
@@ -259,9 +270,10 @@ html, body {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     display: flex;
-    max-width: 840px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 16px;
+    //text-transform: uppercase;
 
     .nav-item {
         flex-grow: 1;
@@ -284,7 +296,7 @@ html, body {
         }
         
          &.active {
-            text-decoration: underline !important;
+            //text-decoration: underline !important;
             //background: $neon;
             color: $neon;
         }
@@ -327,7 +339,7 @@ html, body {
     transition: background 1s;
     width: 100%;
     overflow: hidden;
-     @media all and (min-width: $bp-narrow){
+    @media all and (min-width: $bp-narrow){
         padding: 32px 0 64px 0;
         &.dark {
             &:hover {
@@ -340,8 +352,27 @@ html, body {
 
         }
 
+        &.side-section {
+            flex-direction: row;
+            align-items: flex-start;
+            max-width: 1280px;
+
+            .side-column {
+                padding: 64px 0;
+            }
+
+            &.right-aligned {
+                flex-direction: row-reverse;
+            }
+        }
+
     }
 
+}
+
+.side-column {
+    min-width: 50%;
+    flex-grow: 1;
 }
 
 .arrow {
@@ -649,6 +680,11 @@ html, body {
                     transition: width .25s, height .25s, bottom .25s .2s;
                 };
 
+                .grid-fx {
+                   animation: fadeInGrid 1s;
+                }
+
+
                 .section:hover & {
                     &:after {
                         bottom: 0;
@@ -721,6 +757,18 @@ html, body {
         pointer-events: none;
         transform: rotate3d(1, 0, 0, 60deg) translate3d(0, 0, 120px);
     }
+}
+
+@keyframes fadeInGrid {
+    0% {
+        opacity: 1;  
+    }
+    40% {
+        opacity: 1;  
+    }
+    100% {
+        opacity: 0; 
+      }
 }
 
 
@@ -892,6 +940,10 @@ html, body {
         
         font-size: 15px;
         line-height: 28px;
+
+        .side-column & {
+            padding: 0 64px;
+        }
 
     }
 }
@@ -1125,4 +1177,31 @@ html, body {
         display:block;
         @include css-animate(showInfo, .5s, 1, 0, ease-out);
     }
+}
+
+.grid-fx {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    background-color: #d4d4d4;
+    background-image: linear-gradient(0deg, transparent 25%,
+     rgba(0, 0, 0, 1) 25.1%,
+      rgba(0, 0, 0, 1) 25.9%, 
+      transparent 26%, 
+      transparent 75%,
+       rgba(0, 0, 0, 1) 75.1%,
+        rgba(0, 0, 0, 1) 75.9%,
+         transparent 76%, transparent),
+          linear-gradient(90deg, transparent 25%,
+           rgba(0, 0, 0, 1) 25.1%,
+            rgba(0, 0, 0, 1) 25.9%,
+             transparent 26%, transparent 75%,
+              rgba(0, 0, 0, 1) 75.1%,
+               rgba(0, 0, 0, 1) 75.9%, transparent 76%, transparent);
+    background-size:20% 33%;
+    -webkit-mask-image: -webkit-gradient(linear, left 0%, right bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,.5)));
 }
