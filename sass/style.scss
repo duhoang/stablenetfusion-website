@@ -528,12 +528,13 @@ html, body {
          
             };
             .tile {
-
-            box-shadow: 24px 32px 12px rgba(black, .25);
+                animation: showCC 1s;
+                box-shadow: 24px 32px 12px rgba(black, .25);
             }
 
             .desktop {
-
+                z-index: 5;
+                position: relative;
                 animation: showCC 1s;
             }
 

@@ -413,8 +413,11 @@ html, body {
       .section-view.section-cc .tile + .tile {
         margin-left: 64px !important; }
       .section-view.section-cc .tile {
+        animation: showCC 1s;
         box-shadow: 24px 32px 12px rgba(0, 0, 0, 0.25); }
       .section-view.section-cc .desktop {
+        z-index: 5;
+        position: relative;
         animation: showCC 1s; } }
 @keyframes showCC {
   0% {
