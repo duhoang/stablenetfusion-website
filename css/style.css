@@ -670,10 +670,11 @@ html, body {
   font-size: 32px;
   text-align: center;
   padding: 8px 16px 16px;
-  font-weight: 400; }
+  font-weight: 700;
+  line-height: 1.4; }
   @media all and (min-width: 768px) {
     .section-heading {
-      font-size: 64px;
+      font-size: 52px;
       padding: 16px 32px 32px; } }
 
 .section-info {
@@ -1029,13 +1030,12 @@ html, body {
 
 .next-link {
   font-weight: 200;
-  font-size: 15px;
-  color: #a7a7a7;
+  font-size: 18px;
   text-align: center;
   padding: 32px 0; }
   .next-link .icon {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     fill: #a7a7a7;
     transform: rotate(180deg) translate(-4px, 2px);
     vertical-align: middle; }
@@ -1047,11 +1047,11 @@ html, body {
       fill: #00E5FF; }
   @media all and (min-width: 768px) {
     .next-link {
-      font-size: 26px;
+      font-size: 24px;
       margin: 16px 0; }
       .next-link .icon {
-        width: 24px;
-        height: 24px; } }
+        width: 32px;
+        height: 32px; } }
 
 .icon {
   display: inline-block; }
