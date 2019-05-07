@@ -33,14 +33,14 @@ html, body {
     width:100%;
     height:100%;
     background:$white;
-    font-family: 'Roboto', sans-serif;
     line-height:1.5;
     color:$gray9;
     min-width:320px;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 18px;
     letter-spacing: .2;
-    word-spacing: 1.5;
+    word-spacing: 1.6;
+    font-weight: 300;
 }
 
 .fadein {
@@ -272,7 +272,7 @@ html, body {
     display: flex;
     max-width: 960px;
     margin: 0 auto;
-    padding: 16px;
+    padding: 48px 0 16px;
     //text-transform: uppercase;
 
     .nav-item {
@@ -282,14 +282,14 @@ html, body {
     }
    
     a {
-        color:$gray4;
         padding: 8px;
         display: block;
         margin: 0 8px;
         line-height:1;
         white-space:nowrap;
         position:relative;
-        font-size:15px;
+        font-size:18px;
+        font-weight: 300;
 
         &:hover, &.active {
             color:$neon;
@@ -910,7 +910,7 @@ html, body {
     font-size: 32px;
     text-align: center;
     padding: 8px 16px 16px;
-    font-weight: 200;
+    font-weight: 400;
 
     @media all and (min-width: $bp-narrow){
         font-size: 64px;
@@ -922,9 +922,10 @@ html, body {
 .section-info {
     max-width:$bp-narrow;
     margin:0 auto;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 24px;
     padding: 0 32px;
+    font-weight: 300;
     strong {
         font-weight:400;
     }   
@@ -939,7 +940,7 @@ html, body {
 
     @media all and (min-width: $bp-narrow){
         
-        font-size: 15px;
+        font-size: 18px;
         line-height: 28px;
 
         .side-column & {

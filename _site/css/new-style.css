@@ -1,0 +1,241 @@
+/* new-style.scss */
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* _variables.scss */
+@font-face {
+  font-family: 'Inria Sans';
+  src: url("InriaSans-Light.eot");
+  src: url("InriaSans-Light.eot?#iefix") format("embedded-opentype"), url("InriaSans-Light.woff2") format("woff2"), url("InriaSans-Light.woff") format("woff"), url("InriaSans-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Inria Sans';
+  src: url("InriaSans-LightItalic.eot");
+  src: url("InriaSans-LightItalic.eot?#iefix") format("embedded-opentype"), url("InriaSans-LightItalic.woff2") format("woff2"), url("InriaSans-LightItalic.woff") format("woff"), url("InriaSans-LightItalic.svg") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+@font-face {
+  font-family: 'Inria Sans';
+  src: url("InriaSans-Italic.eot");
+  src: url("InriaSans-Italic.eot?#iefix") format("embedded-opentype"), url("InriaSans-Italic.woff2") format("woff2"), url("InriaSans-Italic.woff") format("woff"), url("InriaSans-Italic.svg") format("svg");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: 'Inria Sans';
+  src: url("InriaSans-Regular.eot");
+  src: url("InriaSans-Regular.eot?#iefix") format("embedded-opentype"), url("InriaSans-Regular.woff2") format("woff2"), url("InriaSans-Regular.woff") format("woff"), url("InriaSans-Regular.svg") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Inria Sans';
+  src: url("InriaSans-Bold.eot");
+  src: url("InriaSans-Bold.eot?#iefix") format("embedded-opentype"), url("InriaSans-Bold.woff2") format("woff2"), url("InriaSans-Bold.woff") format("woff"), url("InriaSans-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'Inria Sans';
+  src: url("InriaSans-BoldItalic.eot");
+  src: url("InriaSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("InriaSans-BoldItalic.woff2") format("woff2"), url("InriaSans-BoldItalic.woff") format("woff"), url("InriaSans-BoldItalic.svg") format("svg");
+  font-weight: 700;
+  font-style: italic; }
+html, body {
+  font-family: 'Inria Sans', sans-serif; }
+
+.homepage {
+  max-width: 1280px;
+  margin: 0 auto;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 300; }
+  .homepage .about {
+    max-width: 960px;
+    margin: 64px auto 0;
+    padding: 24px; }
+  .homepage.user-header .about {
+    margin-top: 0; }
+  .homepage .about-me {
+    display: flex; }
+  .homepage .about-info {
+    padding: 0 24px; }
+  .homepage .about-photo {
+    height: 120px;
+    width: 120px;
+    overflow: hidden;
+    border-radius: 50%; }
+    .homepage .about-photo img {
+      width: 100%;
+      height: 100%; }
+  .homepage .about-name {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1; }
+  .homepage .about-title {
+    padding-left: 2px;
+    padding-top: 4px; }
+  .homepage .about-contact {
+    display: flex;
+    padding-top: 16px; }
+  .homepage .contact-link {
+    width: 32px;
+    height: 32px;
+    display: block;
+    padding: 4px;
+    margin-right: 8px; }
+    .homepage .contact-link svg {
+      width: 100%;
+      height: 100%;
+      fill: #868686; }
+    .homepage .contact-link:last-child {
+      padding: 7px; }
+    .homepage .contact-link:hover svg {
+      fill: #00E5FF; }
+  .homepage .about-desc {
+    padding: 64px 0;
+    line-height: 1.6; }
+    .homepage .about-desc p {
+      margin-bottom: 16px; }
+  .homepage .homepage-body {
+    max-width: 1280px;
+    margin: 0 auto; }
+    @media all and (min-width: 960px) {
+      .homepage .homepage-body {
+        display: flex; } }
+  .homepage .homepage-section-title {
+    font-weight: bold;
+    font-size: 36px;
+    padding: 0 24px; }
+  .homepage .homepage-content {
+    flex-grow: 1; }
+  .homepage .homepage-tile {
+    width: 100%;
+    padding-bottom: 55%;
+    position: relative;
+    overflow: hidden;
+    background: black;
+    margin: 24px 0 64px;
+    border: #e2e2e2 1px solid;
+    position: relative; }
+    .homepage .homepage-tile img {
+      display: block;
+      position: absolute;
+      width: 100%; }
+    .homepage .homepage-tile:hover {
+      border: #00E5FF 1px solid; }
+      .homepage .homepage-tile:hover:after {
+        content: "";
+        position: absolute;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        pointer-events: none;
+        top: -1px;
+        left: -1px;
+        border: 3px solid #00E5FF; }
+  .homepage .homepage-tile-info {
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 24px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6); }
+  .homepage .homepage-tile-title {
+    font-weight: bold;
+    font-size: 36px; }
+  .homepage .homepage-tile-desc {
+    font-size: 24px;
+    padding-top: 8px; }
+  .homepage .homepage-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 24px 16px; }
+    .homepage .homepage-nav .nav-item {
+      padding: 8px; }
+      .homepage .homepage-nav .nav-item:hover a {
+        color: #00E5FF; }
+  .homepage .homepage-sidebar {
+    padding-bottom: 120px; }
+    @media all and (min-width: 960px) {
+      .homepage .homepage-sidebar {
+        width: 480px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding-left: 24px; } }
+  .homepage .writing-links {
+    font-size: 24px;
+    padding: 12px 24px 48px; }
+    .homepage .writing-links li {
+      margin: 16px 0 32px; }
+      .homepage .writing-links li:hover a {
+        color: #00E5FF; }
+  .homepage .shop-item {
+    padding: 24px; }
+  .homepage .shop-screen {
+    position: relative; }
+    .homepage .shop-screen img {
+      width: 100%; }
+    .homepage .shop-screen:hover:after {
+      content: "";
+      position: absolute;
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      border: 3px solid #00E5FF; }
+  .homepage .shop-link {
+    font-size: 24px;
+    padding: 16px 0; }
+    .homepage .shop-link a:hover {
+      color: #00E5FF; }
+  .homepage .shop-desc {
+    font-size: 16px;
+    line-height: 1.6; }
+
+/*# sourceMappingURL=new-style.css.map */

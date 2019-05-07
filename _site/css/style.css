@@ -47,6 +47,42 @@ table {
   border-spacing: 0; }
 
 /* _variables.scss */
+@font-face {
+  font-family: 'Inria Sans';
+  src: url("InriaSans-Light.eot");
+  src: url("InriaSans-Light.eot?#iefix") format("embedded-opentype"), url("InriaSans-Light.woff2") format("woff2"), url("InriaSans-Light.woff") format("woff"), url("InriaSans-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Inria Sans';
+  src: url("InriaSans-LightItalic.eot");
+  src: url("InriaSans-LightItalic.eot?#iefix") format("embedded-opentype"), url("InriaSans-LightItalic.woff2") format("woff2"), url("InriaSans-LightItalic.woff") format("woff"), url("InriaSans-LightItalic.svg") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+@font-face {
+  font-family: 'Inria Sans';
+  src: url("InriaSans-Italic.eot");
+  src: url("InriaSans-Italic.eot?#iefix") format("embedded-opentype"), url("InriaSans-Italic.woff2") format("woff2"), url("InriaSans-Italic.woff") format("woff"), url("InriaSans-Italic.svg") format("svg");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: 'Inria Sans';
+  src: url("InriaSans-Regular.eot");
+  src: url("InriaSans-Regular.eot?#iefix") format("embedded-opentype"), url("InriaSans-Regular.woff2") format("woff2"), url("InriaSans-Regular.woff") format("woff"), url("InriaSans-Regular.svg") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Inria Sans';
+  src: url("InriaSans-Bold.eot");
+  src: url("InriaSans-Bold.eot?#iefix") format("embedded-opentype"), url("InriaSans-Bold.woff2") format("woff2"), url("InriaSans-Bold.woff") format("woff"), url("InriaSans-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'Inria Sans';
+  src: url("InriaSans-BoldItalic.eot");
+  src: url("InriaSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("InriaSans-BoldItalic.woff2") format("woff2"), url("InriaSans-BoldItalic.woff") format("woff"), url("InriaSans-BoldItalic.svg") format("svg");
+  font-weight: 700;
+  font-style: italic; }
 /* _mixins.scss */
 * {
   box-sizing: border-box;
@@ -70,14 +106,14 @@ html, body {
   width: 100%;
   height: 100%;
   background: #ffffff;
-  font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   color: #202020;
   min-width: 320px;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 18px;
   letter-spacing: .2;
-  word-spacing: 1.5; }
+  word-spacing: 1.6;
+  font-weight: 300; }
 
 @media all and (min-width: 768px) {
   .fadein .header {
@@ -259,20 +295,20 @@ html, body {
   display: flex;
   max-width: 960px;
   margin: 0 auto;
-  padding: 16px; }
+  padding: 48px 0 16px; }
   .nav .nav-item {
     flex-grow: 1;
     flex-shrink: 0;
     padding: 0 8px; }
   .nav a {
-    color: #a7a7a7;
     padding: 8px;
     display: block;
     margin: 0 8px;
     line-height: 1;
     white-space: nowrap;
     position: relative;
-    font-size: 15px; }
+    font-size: 18px;
+    font-weight: 300; }
     .nav a:hover, .nav a.active {
       color: #00E5FF; }
     .nav a.active {
@@ -634,7 +670,7 @@ html, body {
   font-size: 32px;
   text-align: center;
   padding: 8px 16px 16px;
-  font-weight: 200; }
+  font-weight: 400; }
   @media all and (min-width: 768px) {
     .section-heading {
       font-size: 64px;
@@ -643,9 +679,10 @@ html, body {
 .section-info {
   max-width: 768px;
   margin: 0 auto;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 24px;
-  padding: 0 32px; }
+  padding: 0 32px;
+  font-weight: 300; }
   .section-info strong {
     font-weight: 400; }
   .section-info em {
@@ -654,7 +691,7 @@ html, body {
     margin-bottom: 32px; }
   @media all and (min-width: 768px) {
     .section-info {
-      font-size: 15px;
+      font-size: 18px;
       line-height: 28px; }
       .side-column .section-info {
         padding: 0 64px; } }
