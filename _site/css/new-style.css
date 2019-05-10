@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* new-style.scss */
 /**
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
@@ -144,13 +145,23 @@ html, body {
     margin: 0 auto; }
     @media all and (min-width: 960px) {
       .homepage .homepage-body {
-        display: flex; } }
+        display: flex;
+        justify-content: center; } }
   .homepage .homepage-section-title {
     font-weight: bold;
     font-size: 36px;
     padding: 0 24px; }
   .homepage .homepage-content {
     flex-grow: 1; }
+    @media all and (min-width: 960px) {
+      .homepage .homepage-content {
+        max-width: 800px; }
+        .homepage .homepage-content:after {
+          display: block;
+          content: "✌";
+          text-align: center;
+          font-size: 48px;
+          padding-bottom: 64px; } }
   .homepage .homepage-tile {
     width: 100%;
     padding-bottom: 55%;
@@ -206,7 +217,14 @@ html, body {
         width: 480px;
         flex-grow: 0;
         flex-shrink: 0;
-        padding-left: 24px; } }
+        padding-left: 24px;
+        transition: width .35s; }
+        .homepage .homepage-sidebar > div, .homepage .homepage-sidebar > ul {
+          width: 456px; }
+        .homepage .homepage-sidebar.collapsed {
+          width: 0;
+          overflow: hidden;
+          transition: width .5s; } }
   .homepage .writing-links {
     font-size: 24px;
     padding: 12px 24px 48px; }

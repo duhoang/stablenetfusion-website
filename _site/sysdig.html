@@ -60,7 +60,21 @@
 
 		})
 
-		$('.nav').scrollLeft($('.nav-item .active').offset().left + $('.nav-item .active').width()/2 - $(window).width()/2);
+		if ($('.nav').length) {
+			$('.nav').scrollLeft($('.nav-item .active').offset().left + $('.nav-item .active').width()/2 - $(window).width()/2);
+		
+		}
+
+		if ($('.homepage-sidebar').length) {
+			$(window).on("scroll", function(){
+				if ($(window).scrollTop() > $('.shop-item').position().top + $('.shop-item').height() + 160) {
+					$('.homepage-sidebar').addClass("collapsed");
+				} else {
+					$('.homepage-sidebar').removeClass("collapsed");
+				}
+			});
+		}
+
 		$('.order').on('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
 		    function() {
 		    	$(this).removeClass("tile-left tile-right");

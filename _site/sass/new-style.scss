@@ -99,6 +99,7 @@ $max-width-narrow: 960px;
 
         @media all and (min-width: $max-width-narrow){
             display: flex;
+            justify-content: center;
         }
     }
 
@@ -110,6 +111,18 @@ $max-width-narrow: 960px;
 
     .homepage-content {
         flex-grow: 1;
+
+        @media all and (min-width: $max-width-narrow){
+            max-width: 800px;
+
+            &:after {
+                display: block;
+                content: "✌";
+                text-align: center;
+                font-size: 48px;
+                padding-bottom: 64px;
+            }
+        }
     }
 
     .homepage-tile {
@@ -189,6 +202,18 @@ $max-width-narrow: 960px;
             flex-grow: 0;
             flex-shrink: 0;
             padding-left: 24px;
+            & > div, & > ul {
+                width: 456px;
+            }
+
+            transition: width .35s;
+
+            &.collapsed {
+                width: 0;
+                overflow: hidden;
+                transition: width .5s;
+
+            }
         }
     }
 
