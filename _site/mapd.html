@@ -68,9 +68,9 @@
 		if ($('.homepage-sidebar').length) {
 			$(window).on("scroll", function(){
 				if ($(window).scrollTop() > $('.shop-item').position().top + $('.shop-item').height() + 160) {
-					$('.homepage-sidebar').addClass("collapsed");
+					//$('.homepage-sidebar').addClass("collapsed");
 				} else {
-					$('.homepage-sidebar').removeClass("collapsed");
+					//$('.homepage-sidebar').removeClass("collapsed");
 				}
 			});
 		}
@@ -127,6 +127,8 @@
 <g id="icon-mail">
 	<path d="M3.5,5.5v13h17v-13H3.5z M18.5,6.5L12,11.4L5.4,6.5H18.5z M4.5,17.5V7.1l7.5,5.5L19.5,7v10.5H4.5z"/>
 </g>
+
+<g id="icon-arrow2"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></g>
 </defs></svg>
 
 <div class="homepage user-header">
@@ -137,7 +139,7 @@
         </div>
         <div class="about-info">
           <div class="about-name">
-            Du Hoang
+            <a href="https://duhoang.com">Du Hoang</a>
           </div>
           <div class="about-title">
             Design Technologist
@@ -163,130 +165,75 @@
 
 
  
-          <div class="nav">
-              <div class="nav-item">
-                  <a href="imeve.html" >Imeve</a>
-              </div>
-              
-            <div class="nav-item">
-              <a href="mapd.html" class="active">MapD</a> 
-            </div>
-            <div class="nav-item">
-              <a href="sysdig.html">Sysdig</a> 
-            </div>
-            <div class="nav-item">
-              <a href="adfin.html" >AdFin</a> 
-            </div>
-            <div class="nav-item">
-              <a href="calorie-count.html">Calorie Count</a> 
-            </div>
-            <div class="nav-item">
-              <a href="vr-ar.html">VR/AR</a> 
-            </div>
-            
-          </div>
+          
       </div>
     </div>
   </div>
+
   <div class="content">
-
     <div class="section">
-      <div class="section-view section-tweet">
-        <div class="arrow arrow-left">
-          <svg viewBox="0 0 24 24"><use xlink:href="#arrow"></use></svg>
-        </div>
 
-        <div class="arrow arrow-right">
-          <svg viewBox="0 0 24 24"><use xlink:href="#arrow"></use></svg>
-        </div>
-
-        <div class="view-transform ">
-          <div class="tile order order-3 animated">
-                <img src="img/mapd-1.png" srcset="img/mapd-1-lowres.png 640w, img/mapd-1.png 1280w" />
-          </div>
-
-          
-
-          <div class="tile order order-2 animated">
-                <img src="img/mapd-2.png" srcset="img/mapd-2-lowres.png 640w, img/mapd-2.png 1280w" />
-          </div>
-
-          <div class="tile order order-1 animated">
-                <img src="img/mapd-3.png" srcset="img/mapd-3-lowres.png 640w, img/mapd-3.png 1280w" />
-          </div>
-
-
-
-
+      <div class="tile" style="border: 1px solid #d4d4d4">
+        <img src="img/mapd-chart-editor.png"  />
+      </div>
+      <div class="horizontal-section">
+        <div class="section-heading">MapD: Massive parallel Database</div>
+        <div class="section-info">
+          <p>I was the first design hire and lead designer at OmniSci (formerly MapD), a Google Ventures GPU database startup. There I designed a clean and modern data visualization platform that simplifies the complex task of configuring dashboards.
+            </p>
         </div>
       </div>
-
-      <div class="section-heading">Tweet Map</div>
-      <div class="section-info">
-        <p><strong>MapD</strong> wanted a beautiful data visualization demo to impress potential investors and customers. So to that end I designed and built for them a bold, modern, highly interactive tweet map, using D3.js and MapBoxGL.</p>
-                  <p>The visual design of the map was inspired by the colors and lines of Japanese woodblock paintings.</p>
-      </div>
+    
+      
     </div>
 
+
     <div class="section">
-      <div class="section-view section-tweet">
-        <div class="arrow arrow-left">
-          <svg viewBox="0 0 24 24"><use xlink:href="#arrow"></use></svg>
+      <div class="horizontal-section wide">
+        <div>
+        <div class="narrow-col"> 
+          <div class="section-heading">Beauty in Simplicity</div>
+            <div class="section-info">
+             <p>In the competitive landscape of data visualization platforms, MapD needed innovative design to differentiate itself from the rest of the pack.</p>
+                    <p>The key was to leapfrog the current industry standard, which is mired in decades of corporate application design, with its obtuse visual language and steep learning curve.</p> 
+                    <p>So I created new design paradigms with the aim of bringing clarity and simplicity to the complex world of big data exploration.</p>
+            </div>
+          </div>
         </div>
-
-        <div class="arrow arrow-right">
-          <svg viewBox="0 0 24 24"><use xlink:href="#arrow"></use></svg>
-        </div>
-
-        <div class="view-transform ">
-          <div class="tile order order-3 animated">
-                <img src="img/mapd-dashboard.png" srcset="img/mapd-dashboard-sm.png 640w, img/mapd-dashboard.png 1280w" />
+        <div class="vertical-imgs">
+          <div class="t">
+            <img src="img/mapd-dashboard.png"  style="border: 1px solid #d4d4d4;"/>
+          </div>
+          <div class="t" style="border: 1px solid #d4d4d4; margin: 32px 0;">
+            <img src="img/mapd-2.png"  />
           </div>
 
-          
-
-          <div class="tile order order-2 animated">
-                <img src="img/mapd-chart-editor.png" srcset="img/mapd-chart-editor-sm.png 640w, img/mapd-chart-editor.png 1280w" />
-          </div>
-
-          <div class="tile order order-1 animated">
-                
-                 <img src="img/mapd-dashboards.png" srcset="img/mapd-dashboards-sm.png 640w, img/mapd-dashboards.png 1280w" />
-          </div>
-
-
-
-
         </div>
-      </div>
-
-      <div class="section-heading">Data Visualization Dashboard</div>
-      <div class="section-info">
-        <p>In the competitive landscape of data visualization platforms, <strong>MapD</strong> needed innovative design to differentiate itself from the rest of the pack.</p>
-                  <p>The key was to leapfrog the current industry standard, which is mired in decades of corporate application design, with its obtuse visual language and steep learning curve.</p> 
-                  <p>So I created new design paradigms with the aim of bringing clarity and simplicity to the complex world of big data exploration.</p>
       </div>
     </div>
-
-    <div class="section dark">
+    <div class="section">
+      <div class="horizontal-section">
+        <div class="section-heading">Beauty in Motion</div>
+        <div class="section-info">
+          <p>My philosophy is that interactive data visualization should be more than just a collection of static views. And through the thoughtful use of animation and transitions, my goal is to bring them to life.
+            </p>
+        </div>
+      </div>
       <div class="section-view video">
         <div class="view-transform">
-
-          <div class="tile">
+          <div class="tile" style="border: 1px solid #d4d4d4;">
             <iframe src="https://player.vimeo.com/video/144312724?loop=1&amp;title=0&amp;byline=0&amp;portrait=0" style="width:100%; height:100%;"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           </div>
         </div>
       </div>
-
-      <div class="section-heading">Tweet Map Interactions</div>
-      <div class="section-info">
-        <p>My philosophy is that interactive data visualization should be more than just a collection of static views. And through the thoughtful use of animation and transitions, my goal is to bring them to life.</p>
-        </p>
-      </div>
+     
     </div>
-    
-  </div>
-  <div  class="next-link"><a href="sysdig.html"> My Work For Sysdig<span class="icon"><svg viewBox="0 0 24 24"><use xlink:href="#arrow"></use></svg></span></a></div>
-</body>
 
+  
+
+    <div  class="next-link" >
+      <a href="sysdig.html">Sysdig<span class="icon" ><svg viewBox="0 0 24 24"><use xlink:href="#icon-arrow2"></use></svg></span></a>
+    </div>
+  </div>
+</body>
 </html>

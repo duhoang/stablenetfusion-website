@@ -94,7 +94,6 @@ html, body {
   font-size: 18px;
   font-weight: 300; }
   .homepage .about {
-    max-width: 960px;
     margin: 64px auto 0;
     padding: 24px; }
   .homepage.user-header .about {
@@ -102,37 +101,41 @@ html, body {
   .homepage .about-me {
     display: flex; }
   .homepage .about-info {
-    padding: 0 24px; }
+    padding: 0 16px; }
   .homepage .about-photo {
-    height: 120px;
-    width: 120px;
+    height: 60px;
+    width: 60px;
     overflow: hidden;
     border-radius: 50%; }
     .homepage .about-photo img {
       width: 100%;
       height: 100%; }
   .homepage .about-name {
-    font-size: 40px;
+    font-size: 28px;
     font-weight: 700;
-    line-height: 1; }
+    line-height: 1;
+    padding-top: 4px; }
   .homepage .about-title {
     padding-left: 2px;
-    padding-top: 4px; }
+    padding-top: 4px;
+    font-size: 14px;
+    display: none; }
   .homepage .about-contact {
     display: flex;
-    padding-top: 16px; }
+    padding-top: 4px; }
   .homepage .contact-link {
     width: 32px;
-    height: 32px;
+    height: 24px;
     display: block;
-    padding: 4px;
-    margin-right: 8px; }
+    padding: 0 6px;
+    position: relative;
+    left: -4px; }
     .homepage .contact-link svg {
       width: 100%;
       height: 100%;
       fill: #868686; }
     .homepage .contact-link:last-child {
-      padding: 7px; }
+      padding: 0 8px; }
     .homepage .contact-link:hover svg {
       fill: #00E5FF; }
   .homepage .about-desc {

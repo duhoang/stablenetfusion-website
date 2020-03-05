@@ -108,12 +108,12 @@ html, body {
 
     img {
         border-radius:100%;
-        width: 80px;
-        height: 80px;
+        width: 40px;
+        height: 40px;
 
         @media all and (min-width: $bp-narrow){
-            width: 120px;
-            height: 120px;
+            width: 60px;
+            height: 60px;
         }
     }
 }
@@ -160,7 +160,7 @@ html, body {
     word-spacing: 2;
     @media all and (min-width: $bp-narrow){
         margin-bottom: 2px;
-        font-size:34px;
+        font-size:24px;
     }
 }
 
@@ -275,6 +275,7 @@ html, body {
     padding: 48px 0 16px;
     //text-transform: uppercase;
 
+    display: none;
     .nav-item {
         flex-grow: 1;
         flex-shrink: 0;
@@ -331,7 +332,7 @@ html, body {
 .section {
     padding:16px;
     margin:0 auto;
-    padding: 32px 0 32px 0;
+    padding: 16px 0 32px 0;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -428,16 +429,11 @@ html, body {
 
 
 .section-view {
-    padding: 32px 0;
     position: relative;
     width: 100%;
     max-width: 1440px;
     user-select: none;
 
-    @media all and (min-width: $bp-narrow){
-        padding: 64px 0;
-
-    }
     perspective: 2000px;
     perspective-origin: center center;
 
@@ -809,7 +805,6 @@ html, body {
     width: 100%;
     max-width: 1280px;
     position: relative;
-    background: $gray2;
     transform: translate3d(0, 0, 0);
 
     img {
@@ -907,14 +902,13 @@ html, body {
 
 
 .section-heading {
-    font-size: 32px;
-    text-align: center;
-    padding: 8px 16px 16px;
+    font-size: 64px;
+    padding: 32px 32px 16px;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.2;
 
     @media all and (min-width: $bp-narrow){
-        font-size: 52px;
+        font-size: 80px;
         padding: 16px 32px 32px;
     }
 }
@@ -1122,21 +1116,23 @@ html, body {
 }
 
 .next-link {
-    font-weight: 200;
-    font-size:18px;
-    text-align:center;
-    padding: 32px 0;
+    max-width: 1280px;
+    font-weight: 700;
+    margin: 0 auto;
+    font-size:24px;
+    padding: 32px;
+    text-align: right;
 
     
     .icon {
-        width:16px;
-        height:16px;
-        fill:$gray4;
-        transform: rotate(180deg) translate(-4px, 2px);
+        width:24px;
+            height:24px;
+        margin-left: 8px;
+        transform: translate(-2px, -2px);
         vertical-align: middle;
 
         &.flip {
-            transform: rotate(0) translate(-4px, 0);
+            transform: rotate(180deg) translate(-4px, 0);
         }
     }
     
@@ -1149,11 +1145,7 @@ html, body {
     
     @media all and (min-width: $bp-narrow){
         font-size:24px;
-        margin: 16px 0;
-        .icon {
-            width:24px;
-            height:24px;
-        }
+        margin: 16px auto;
     }
     
 }
@@ -1207,3 +1199,85 @@ html, body {
     background-size:20% 33%;
     -webkit-mask-image: -webkit-gradient(linear, left 0%, right bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,.5)));
 }
+
+.horizontal-section {
+    
+
+    @media all and (min-width: $bp-narrow){
+        display: flex;
+        max-width: 960px;
+        & > div {
+            width: 50%;
+        }
+        & .section-info, & .section-heading, & .center-block {
+
+            padding: 96px 32px 32px;
+        }
+
+        & > div .section-heading + .section-info {
+           padding-top: 0;
+        } 
+
+        &.wide {
+            max-width: 1280px;
+
+            & > div:first-child {
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+        }
+
+        .narrow-col {
+            max-width: 480px;
+        }
+    }
+}
+
+.tile-grid {
+    display: grid;
+    max-width: 1280px;
+    width: 100%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+.t {
+    img {
+        width: 100%;
+    }
+   
+
+}
+
+.center-block {
+    display: flex;
+    align-items: center;
+    margin-top: 48px;
+    @media all and (min-width: $bp-narrow){
+        margin-top: 0;
+    }
+}
+
+.bold {
+    font-size: 48px;
+    font-weight: 700;
+    padding: 48px 0 32px;
+
+}
+
+.vertical-imgs {
+    @media all and (min-width: $bp-narrow){
+        padding: 96px 32px 32px;
+    }
+}
+
+.center-block a img {
+    &:hover {
+        border: 1px solid $neon !important;
+    }
+}
+
+
+
+
