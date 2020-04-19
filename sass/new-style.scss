@@ -227,12 +227,13 @@ $max-width-narrow: 960px;
     }
 
     .writing-links {
-        font-size: 24px;
-        padding: 12px 24px 48px;
+        font-size: 20px;
+        //padding: 12px 24px 48px;
         li {
-            margin: 16px 0 32px;
+            list-style: disc;
+            margin: 16px 0 32px 24px;
             &:hover a {
-                color: $neon;
+                text-decoration: underline;
                 
             }
 
@@ -241,35 +242,32 @@ $max-width-narrow: 960px;
     }
 
     .shop-item {
-        padding: 24px;
+        margin: 8px 16px 32px 16px;
     }
 
     .shop-screen {
         position: relative;
         img {
             width: 100%;
+            
+            &:hover {
+            
+             border: $neon 1px solid !important;
+            }
+        
         }
 
-        &:hover:after {
-            content: "";
-            position: absolute;
-            width: calc(100% - 6px);
-            height: calc(100% - 6px);
-            pointer-events: none;
-            top: 0;
-            left: 0;
-            border: 3px solid $neon;
-        }
     }
 
     .shop-link {
-        font-size: 24px;
-        padding: 16px 0;
-        a {
-            &:hover {
-                color: $neon;
-            }
+        text-align: center;
+        font-size: 20px;
+        padding: 24px 0;
+        display: block;
+        &:hover {
+            text-decoration: underline;
         }
+        
     }
 
     .shop-desc {

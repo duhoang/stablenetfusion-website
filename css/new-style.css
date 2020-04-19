@@ -233,32 +233,27 @@ html, body {
           overflow: hidden;
           transition: width .5s; } }
   .homepage .writing-links {
-    font-size: 24px;
-    padding: 12px 24px 48px; }
+    font-size: 20px; }
     .homepage .writing-links li {
-      margin: 16px 0 32px; }
+      list-style: disc;
+      margin: 16px 0 32px 24px; }
       .homepage .writing-links li:hover a {
-        color: #00E5FF; }
+        text-decoration: underline; }
   .homepage .shop-item {
-    padding: 24px; }
+    margin: 8px 16px 32px 16px; }
   .homepage .shop-screen {
     position: relative; }
     .homepage .shop-screen img {
       width: 100%; }
-    .homepage .shop-screen:hover:after {
-      content: "";
-      position: absolute;
-      width: calc(100% - 6px);
-      height: calc(100% - 6px);
-      pointer-events: none;
-      top: 0;
-      left: 0;
-      border: 3px solid #00E5FF; }
+      .homepage .shop-screen img:hover {
+        border: #00E5FF 1px solid !important; }
   .homepage .shop-link {
-    font-size: 24px;
-    padding: 16px 0; }
-    .homepage .shop-link a:hover {
-      color: #00E5FF; }
+    text-align: center;
+    font-size: 20px;
+    padding: 24px 0;
+    display: block; }
+    .homepage .shop-link:hover {
+      text-decoration: underline; }
   .homepage .shop-desc {
     font-size: 16px;
     line-height: 1.6; }
