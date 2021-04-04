@@ -1,0 +1,102 @@
+/* new-style.scss */
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  font-family: 'Inria Sans', sans-serif; }
+
+a, a:visited {
+  text-decoration: none;
+  color: inherit; }
+
+.home {
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 300; }
+  .home .top-section {
+    padding: 64px 0; }
+    @media all and (min-width: 640px) {
+      .home .top-section {
+        display: flex;
+        padding: 120px 0; } }
+  .home .photo {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; }
+    .home .photo img {
+      width: 120px;
+      height: 120px;
+      border: 1px solid #d0d0d0;
+      border-radius: 100%; }
+    @media all and (min-width: 640px) {
+      .home .photo {
+        min-width: 240px; } }
+  .home .about {
+    flex-grow: 1;
+    padding: 16px 48px; }
+    .home .about h1 {
+      font-size: 40px;
+      font-weight: 500;
+      margin: 12px 0 32px; }
+    .home .about p {
+      margin-bottom: 24px; }
+    @media all and (min-width: 640px) {
+      .home .about {
+        min-width: 240px;
+        padding: 16px; } }
+  .home .links {
+    margin: 48px 0 0 0;
+    font-size: 14px;
+    color: #9c9c9c; }
+    .home .links a {
+      display: block; }
+      .home .links a:hover {
+        text-decoration: underline; }
+
+/*# sourceMappingURL=style-2021.css.map */
