@@ -242,6 +242,10 @@ html, body {
     color: var(--text-color-dark);
   }
 
+  img, iframe {
+    filter: brightness(80%);
+  }
+
   .photo img {
     border-color: rgba(120, 120, 120, .5);
   }
