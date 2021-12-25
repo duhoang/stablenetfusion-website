@@ -10,74 +10,14 @@
 
 <script>
 	$(function(){
-		if (window.location.pathname != "/") {
-			$('body').removeClass("fadein");
-		}
-		let scrollTop = 0;
-		/*
-		$(window).on("scroll", function(){
-			if ($(window).scrollTop() < scrollTop) {
-				if ($(window).scrollTop() > $('.header').outerHeight() && $(window).scrollTop() - scrollTop < -10) {
-					$('.header').addClass('dock').removeClass('dock-hide')
-					$('body').css('padding-top', $('.header').outerHeight()+'px').removeClass("fadein");
-				} else if ($(window).scrollTop() < $('.header').outerHeight()) {
-						$('.header').removeClass('dock').removeClass('dock-hide')
-						$('body').css('padding-top', 0);
-				}
-			} else if ($('.header').hasClass('dock') && $(window).scrollTop() > $('.header').outerHeight()) {
-						$('.header').addClass('dock-hide')
-			}
-
-			scrollTop = $(window).scrollTop();
+		$(".cell img").click(function(){
+			var srcstring = $(this).attr("src");
+			$(".lightbox-image").css("background-image", "url("+srcstring+")");
+			$(".lightbox").fadeIn();
 		});
-		*/
-
-
-		$(".arrow").on("click", function(){
-
-			if ($(this).hasClass("arrow-right")) {
-				$(this).parent().find(".order").each(function() {
-					if ($(this).hasClass("order-1")) {
-						$(this).addClass("order-2").removeClass("order-1 animated")
-					} else if ($(this).hasClass("order-2")) {
-						$(this).addClass("order-3").removeClass("order-2 animated")
-					} else {
-						$(this).addClass("order-1 tile-right").removeClass("order-3 animated")
-					}
-				})
-			} else {
-				$(this).parent().find(".order").each(function() {
-					if ($(this).hasClass("order-1")) {
-						$(this).addClass("order-3").removeClass("order-1 animated")
-					} else if ($(this).hasClass("order-2")) {
-						$(this).addClass("order-1").removeClass("order-2 animated")
-					} else {
-						$(this).addClass("order-2 tile-left").removeClass("order-3 animated")
-					}
-				})
-			}
-
+		$(".lightbox").click(function(){
+			$(".lightbox").fadeOut();
 		})
-
-		if ($('.nav').length) {
-			$('.nav').scrollLeft($('.nav-item .active').offset().left + $('.nav-item .active').width()/2 - $(window).width()/2);
-		
-		}
-
-		if ($('.homepage-sidebar').length) {
-			$(window).on("scroll", function(){
-				if ($(window).scrollTop() > $('.shop-item').position().top + $('.shop-item').height() + 160) {
-					//$('.homepage-sidebar').addClass("collapsed");
-				} else {
-					//$('.homepage-sidebar').removeClass("collapsed");
-				}
-			});
-		}
-
-		$('.order').on('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
-		    function() {
-		    	$(this).removeClass("tile-left tile-right");
-		    });
 	});
 
 
@@ -96,6 +36,11 @@
 </head>
 
 <body class="fadein">
+	<div class="lightbox">
+		<div class="lightbox-image" style="background-image: url(img/SplashScreen.png)">
+
+		</div>
+	</div>
 	
 <svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="224" height="32" viewBox="0 0 224 32">
 <defs>
@@ -154,7 +99,7 @@
       </div>
       <div class="text">
         <h1>Avatour</h1>
-        <p>Avatour is a live-streaming 360&#xb0 video, VR telepresence startup. I work with the founders to conceive the product, identify use cases, design and build a suite of VR and companion apps.</p>
+        <p>Avatour is a live-streaming 360&#xb0 video, VR telepresence startup. I work with the founders to conceive the product, identify use cases, and design and build a suite of VR and companion apps.</p>
         <p>The MVP we made together went on to raise $2.9 million, and Avatour has been going strong ever since.</p>
     </div>
 

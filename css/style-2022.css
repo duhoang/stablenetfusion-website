@@ -164,7 +164,7 @@ html, body {
 .portfolio .grid {
   display: grid;
   grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
-  grid-template-rows: auto auto auto; 
+  grid-template-rows: auto auto; 
   column-gap: 8px;
   row-gap: 8px;
   margin: 8px 0 16px;
@@ -236,13 +236,32 @@ html, body {
       
 }
 
+.lightbox {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 100;
+  padding: 8px;
+  backdrop-filter: blur(16px);
+}
+
+.lightbox-image {
+  width: calc(100% - 16px);
+  height:  calc(100% - 16px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 @media (prefers-color-scheme: dark) {
   html, body {
     background: var(--bg-color-dark);
     color: var(--text-color-dark);
   }
 
-  img, iframe {
+  img, iframe, .lightbox-image {
     filter: brightness(80%);
   }
 
@@ -257,4 +276,9 @@ html, body {
   .home .links {
     color: var(--color-gray-dark);
   }
+
+  .lightbox {
+    background: rgba(0, 0, 0, 0.75);
+  }
 }
+
