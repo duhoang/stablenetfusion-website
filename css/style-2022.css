@@ -203,7 +203,7 @@ html, body {
 
 .portfolio .grid.double {
   grid-template-columns: 0.5fr 0.5fr;
-  grid-template-rows: auto auto; 
+  grid-template-rows: auto auto auto;  
   
 }
 
