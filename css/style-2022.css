@@ -167,7 +167,7 @@ html, body {
   grid-template-rows: auto auto; 
   column-gap: 8px;
   row-gap: 8px;
-  margin: 8px 0 16px;
+  margin: 8px 0;
 }
 
 .portfolio .cell {
@@ -195,6 +195,13 @@ html, body {
   margin: auto;
 }
 
+.portfolio .grid.triple-rand {
+  grid-template-columns: 0.385fr 0.368fr 0.25fr;
+  grid-template-rows: auto; 
+  margin: auto;
+}
+
+
 .portfolio .grid.double-one {
   grid-template-columns: auto 0.33fr 0.33fr auto;
   grid-template-rows: auto; 
@@ -204,6 +211,12 @@ html, body {
 .portfolio .grid.double {
   grid-template-columns: 0.5fr 0.5fr;
   grid-template-rows: auto auto auto;  
+  
+}
+
+.portfolio .grid.double-span {
+  grid-template-columns: 0.7445fr 0.2555fr;
+  grid-template-rows: auto;  
   
 }
 
