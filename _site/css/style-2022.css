@@ -89,7 +89,7 @@ a, a:visited {
     padding: 16px 48px; }
     .home .about h1 {
       font-size: 40px;
-      font-weight: 500;
+      font-weight: 400;
       margin: 12px 0 32px; }
     .home .about p {
       margin-bottom: 24px; }
@@ -137,7 +137,7 @@ html, body {
   flex-grow: 1;
   font-size: 20px;
   padding-left: 14px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .portfolio .section {
@@ -148,7 +148,7 @@ html, body {
 .portfolio .section h1 {
   font-size: 40px;
   margin: 32px 0;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .portfolio .text {
