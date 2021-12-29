@@ -149,12 +149,19 @@ html, body {
   font-size: 40px;
   margin: 32px 0;
   font-weight: 400;
+  line-height: 1.25;
 }
 
 .portfolio .text {
   max-width: 480px;
-  margin: 16px auto 48px;
+  margin: 32px auto 64px;
   padding: 0 48px;
+}
+
+@media all and (min-width: 640px) {
+  .portfolio .text {
+    margin: 48px auto 120px;
+  }
 }
 
 .portfolio .text p {
