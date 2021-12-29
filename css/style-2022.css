@@ -122,6 +122,13 @@ html, body {
   padding: 16px;
 }
 
+@media all and (min-width: 640px) {
+  .portfolio  .top-section {
+    margin: auto auto 48px auto;
+    padding: 48px 16px 16px 16px;
+  }
+}
+
 .portfolio .photo{
   width: 64px;
   height: 64px;
@@ -154,13 +161,13 @@ html, body {
 
 .portfolio .text {
   max-width: 480px;
-  margin: 32px auto 64px;
+  margin: 40px auto 80px;
   padding: 0 48px;
 }
 
 @media all and (min-width: 640px) {
   .portfolio .text {
-    margin: 48px auto 120px;
+    margin: 80px auto 120px;
   }
 }
 
