@@ -15,9 +15,43 @@
 			var srcstring = $(this).attr("src");
 			$(".lightbox-image").css("background-image", "url("+srcstring+")");
 			$(".lightbox").fadeIn();
+
+			var nextImg = $(this).parent().next("cell").find("img");
+
+			$(".lightbox").one("swipeLeft", function(){
+
+				if (!nextImg) {
+					$(".lightbox").fadeOut();
+					return;
+				}
+
+				$(".lightbox-image").animate(
+					{ exit: 100 },
+					{
+						duration: 500,
+						step: function(now) {
+							$(this).css({ transform: 'translateX(-' + now + '%)' });
+						},
+						complete: function () {
+							var srcstring = $(nextImg).attr("src");
+							$(".lightbox-image").css("background-image", "url("+srcstring+")");
+							$(".lightbox-image").css("transform", "translateX(100%)");
+							$(".lightbox-image").animate(
+								{ enter: 100 },
+								{
+									duration: 500,
+									step: function(next) {
+										$(this).css({ transform: 'translateX(' + (100 - next) + '%)' });
+									}
+								},
+							);
+						}
+					},
+				);
+			});
 		});
 		$(".lightbox").click(function(){
-			$(".lightbox").fadeOut();
+			//$(".lightbox").fadeOut();
 		})
 	});
 
