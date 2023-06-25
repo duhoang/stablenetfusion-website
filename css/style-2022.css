@@ -46,7 +46,7 @@ html, body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-image: linear-gradient(30deg, #C153E8, #1E34A3);
+  background-image: linear-gradient(30deg, #C153E8 20%, #292275 70%);
 }
 
 a, a:visited {
@@ -116,6 +116,7 @@ a, a:visited {
    transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(5deg) rotateY(-17deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) skewX(-9deg) skewY(0deg);
    -webkit-mask-image: linear-gradient(black 40%, transparent 70%);
   mask-image: linear-gradient(black 40%, transparent 70%);
+  filter: saturate(140%);
 
 }
 
@@ -131,7 +132,7 @@ a, a:visited {
   background: 
     linear-gradient(to top, black, transparent), 
     url(../img/noise.svg);
-  
+    filter: contrast(200%) brightness(1000%);
 }
 
 .text {
@@ -163,7 +164,7 @@ a, a:visited {
   top:25%;
   left: -25%; 
   transform: rotate(30deg);
-  background-image: radial-gradient(black, transparent), 
+  background-image: radial-gradient(yellow, transparent), 
   url(../img/noise.svg);
   -webkit-mask-image: radial-gradient(black 40%, transparent 70%);
   mask-image: radial-gradient(black 40%, transparent 70%);
@@ -197,8 +198,7 @@ a, a:visited {
   transform: rotate(-45deg);
   -webkit-mask-image: radial-gradient(black 20%, transparent 70%);
   mask-image: radial-gradient(black 20%, transparent 70%);
-
-  filter: contrast(400%) brightness(150%) saturate(70%);
+  filter: contrast(400%) brightness(150%) saturate(50%);
   animation: rotateShape 90s infinite linear;
 }
 
