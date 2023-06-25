@@ -46,7 +46,7 @@ html, body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-image: linear-gradient(30deg, #C153E8 20%, #292275 70%);
+  background-image: linear-gradient(30deg, #C153E8 10%, #4138AF 60%);
 }
 
 a, a:visited {
@@ -120,6 +120,15 @@ a, a:visited {
 
 }
 
+@keyframes noiseEffect {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -100% 100%;
+  }
+}
+
 .product-img:after {
   width: 93%;
   display: block;
@@ -133,6 +142,7 @@ a, a:visited {
     linear-gradient(to top, black, transparent), 
     url(../img/noise.svg);
     filter: contrast(200%) brightness(1000%);
+    animation: noiseEffect 160s infinite linear;
 }
 
 .text {
