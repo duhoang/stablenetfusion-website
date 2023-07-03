@@ -65,11 +65,8 @@ a, a:visited {
   
 .home {
   font-size: 16px;
-  display:flex;
-  flex-direction: column;
   width: 100vw;
   height: 100vh;
-  align-items: center;
   color: white;
   overflow: hidden;
  }
@@ -78,7 +75,7 @@ a, a:visited {
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding: 32px 0 0;
+   padding-top: calc(4vh + 16px);
    flex-grow: 0;
    position: relative;
    z-index: 5;
@@ -96,19 +93,20 @@ a, a:visited {
  }
 
  .product {
-   flex-grow: 1;
    perspective: 1000px;
-  perspective-origin: 50% 50%;
-  max-width: 960px;
-  width: 100%;
-  z-index: 10;
-  position: relative;
-  padding-top: 8vh;
-  transform: translate(-24px, -64px);
+    perspective-origin: 50% 50%;
+    width: min(120vh, 100%);
+    min-width: 460px;
+    z-index: 10;
+    position: relative;
+    transform: translate(calc(-50% - 24px), calc(-50% + 5vh ));
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
  }
  .product-img {
-   background: url(../img/beautyshot.png) no-repeat;
+   background: url(../img/beautyshot.png) no-repeat center center;
    background-size: contain;
    padding-top: 80%;
    margin: 0 auto;
@@ -160,11 +158,17 @@ a, a:visited {
 .download {
   display: block;
   background: black;
-  padding: 16px;
+  padding: 16px 16px 12px;
   margin: 32px auto 0;
-  border-radius: 32px;
+  border-radius: 28px;
   min-width: 120px;
   max-width: 160px;
+}
+
+.download span {
+  display: block;
+  font-size: 12px;
+  opacity: .5;
 }
 
 .waves {
@@ -210,7 +214,7 @@ a, a:visited {
   -webkit-mask-image: radial-gradient(black 20%, transparent 70%);
   mask-image: radial-gradient(black 20%, transparent 70%);
   filter: contrast(400%) brightness(150%) saturate(50%);
-  animation: rotateShape 90s infinite linear;
+  animation: rotateShape 120s infinite linear;
 }
 
 @keyframes rotateShape {
