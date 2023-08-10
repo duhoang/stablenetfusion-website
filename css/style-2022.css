@@ -137,8 +137,8 @@ a, a:visited {
   left: 3.5%;
   mix-blend-mode: multiply;
   background: 
-    linear-gradient(to top, black, transparent), 
-    url(../img/noise.svg);
+    linear-gradient(to top, black, transparent); 
+   /* url(../img/noise.svg); */
     filter: contrast(200%) brightness(1000%);
     animation: noiseEffect 160s infinite linear;
 }
@@ -179,8 +179,7 @@ a, a:visited {
   top:25%;
   left: -25%; 
   transform: rotate(30deg);
-  background-image: radial-gradient(yellow, transparent), 
-  url(../img/noise.svg);
+  background-image: radial-gradient(yellow, transparent);
   -webkit-mask-image: radial-gradient(black 40%, transparent 70%);
   mask-image: radial-gradient(black 40%, transparent 70%);
 }
@@ -192,8 +191,7 @@ a, a:visited {
   height: 100%;
   top: 15%;
   left: -25%;
-  background-image: radial-gradient(#1EFFF1, transparent), 
-  url(../img/noise.svg);
+  background-image: radial-gradient(#1EFFF1, transparent);
   transform: rotate(-15deg);
   -webkit-mask-image: radial-gradient(black 20%, transparent 70%);
   mask-image: radial-gradient(black 20%, transparent 70%);
@@ -208,8 +206,7 @@ a, a:visited {
   height: 100%;
   top: -20%;
   left: 5%;
-  background-image: radial-gradient(#FF5E98 , transparent), 
-  url(../img/noise.svg);
+  background-image: radial-gradient(#FF5E98 , transparent);
   transform: rotate(-45deg);
   -webkit-mask-image: radial-gradient(black 20%, transparent 70%);
   mask-image: radial-gradient(black 20%, transparent 70%);
